@@ -2,12 +2,16 @@ const LATITUDE = 57.3081;
 const LONGITUDE  = 18.1489;
 const API_ADRESS = `https://opendata-download-metfcst.smhi.se/`;
 const LONGLAT = `api/category/pmp3g/version/2/geotype/point/lon/${LONGITUDE}/lat/${LATITUDE}/data.json`
-let array = []
-let object;
-let saved_data;
-const TABLE_TODAY = document.querySelector("#table_today");
-console.dir(TABLE_TODAY)
 
+const TABLE_TODAY = document.querySelector("#table_today");
+
+document.addEventListener('load', main);
+
+function main(){
+    removeEventListener('load', main);
+    console.dir(TABLE_TODAY);
+    createTable();
+}
 
 function getResponse(){
         return fetch(API_ADRESS+LONGLAT).then(response=>{
@@ -45,7 +49,7 @@ function createTable(){
     })
 }
 
-createTable();
+
 
 function appendTemperature(TABLE_TODAY, relevant_times){
     console.dir(relevant_times)
