@@ -266,7 +266,7 @@ html.swipebox-html.swipebox-touch {
 }
 @media screen and (min-width: 800px) {
   #swipebox-close {
-    right: 20px;
+    right: 40px;
   }
 
   #swipebox-arrows {
