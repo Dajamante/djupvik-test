@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Pictures</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/swipebox.css" />
+    <script src="../assets/js/index.js" type="module"></script>
+    <script src="../assets/js/jquery-2.1.0.min.js"></script>
+    <script src="../assets/js/jquery.swipebox.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Amazing pictures</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Startsidan</a></li>
+                <li><a href="guestboat.html">Gästbåtar</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="turism.html">Turism</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="pictures" class="pictures_container">
+            <ul id="box-container">
+                <li class="box">
+                    <a href="../assets/images/big/D-2.jpg" class="swipebox horizontal" title="woman fishing">
+                        <img src="../assets/images/big_resized/D-2.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="../assets/images/big/D-3.jpg" class="swipebox horizontal" title="something">
+                        <img src="../assets/images/big_resized/D-3.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="../assets/images/big/D-4.jpg" class="swipebox vertical" title="something else">
+                        <img src="../assets/images/big_resized/D-4.jpg" alt="image">
+                    </a>
+                    <a href="../assets/images/big/D-5.jpg" class="swipebox vertical" title="">
+                        <img src="../assets/images/big_resized/D-5.jpg" alt="image">
+                    </a>
+                    <a href="../assets/images/big/D-6.jpg" class="swipebox horizontal" title="">
+                        <img src="../assets/images/big_resized/D-6.jpg" alt="image">
+                    </a>
+                    <a href="../assets/images/big/D-7.jpg" class="swipebox vertical" title="">
+                        <img src="../assets/images/big_resized/D-7.jpg" alt="image">
+                    </a>
+                    <a href="../assets/images/big/D-8.jpg" class="swipebox vertical" title="">
+                        <img src="../assets/images/big_resized/D-8.jpg" alt="image">
+                    </a>
+                    <a href="../assets/images/big/D-9.jpg" class="swipebox bigger" title="">
+                        <img src="../assets/images/big_resized/D-9.jpg" alt="image">
+                    </a>
+                    <a href="../../assets/images/big/D-10.jpg" class="swipebox bigger" title="">
+                        <img src="../../assets/images/big_resized/D-10.jpg" alt="image">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        /* Basic Gallery */
+        $('.swipebox').swipebox();
+
+    });
+</script>
+
+</html>

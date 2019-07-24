@@ -1,0 +1,29 @@
+.pictures_container {
+    display: grid;
+    grid-gap: 5px;
+    /*the horizontal pictures are approx 172 by 260 px*/
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(270px, 1fr));
+    grid-auto-flow: dense;
+}
+
+#box-container{
+    list-style: none;
+    object-fit: cover;
+}
+ul#box-container li a img{
+    object-fit: cover;
+}
+
+.pictures_container .box_container .box .horizontal {
+    grid-column: span 2;
+}
+
+.pictures_container .box_container .box .vertical {
+    grid-row: span 2;
+}
+
+.pictures_container .box_container .box .bigger {
+    grid-column: span 2;
+    grid-row: span 2;
+}
