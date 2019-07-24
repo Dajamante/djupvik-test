@@ -7,6 +7,10 @@
     grid-auto-flow: dense;
 }
 
+ul#box-container a > img{
+    border-radius: 1em;
+}
+
 #box-container{
     list-style: none;
     object-fit: cover;
@@ -27,3 +31,4 @@ ul#box-container li a img{
     grid-column: span 2;
     grid-row: span 2;
 }
+
