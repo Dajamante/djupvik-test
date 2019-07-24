@@ -71,7 +71,8 @@ function appendTemperature(relevant_times){
     for (let i = 0; i < 3; i++) {
         let formated_date = new Date(relevant_times[i].validTime).toLocaleDateString("sv-SV", options);
         let formated_hour = new Date(relevant_times[i].validTime).getHours();
-        let temperature = relevant_times[i].parameters[11].values;
+        let temp_index = getTemperatureIndex(relevant_times[i].parameters);
+        let temperature = relevant_times[i].parameters[temp_index].values;
 
         TABLE_TODAY.rows[i+1].cells[0].innerHTML = formated_date;
         TABLE_TODAY.rows[i+1].cells[1].innerHTML = formated_hour;
@@ -79,13 +80,27 @@ function appendTemperature(relevant_times){
         }
         appendOrientedArrow(relevant_times);
 }
+/*------------------------------
+Help function to get correct index for temperature, as it variates.
+--------------------------------*/
+function getTemperatureIndex(parameters_array){
+  let correct_index;
+  for (let j = 0; j < parameters_array.length; j++) {
+            if(parameters_array[j].name == "t"){
+            correct_index = j;
+            break;
+            }
+      }
+      return correct_index;
+}
 
 function appendOrientedArrow(relevant_times){
     for (let i = 0; i < 3; i++) {
         let arrow = new Image(20, 20);
         let windSpeed = document.createElement('div')
         arrow.src = '../assets/images/small/arrow.jpg';
-        let arrowDegrees = (relevant_times[i].parameters[13].values)
+        let wd_index = getWindDirectionIndex(relevant_times[i].parameters);
+        let arrowDegrees = (relevant_times[i].parameters[wd_index].values)
         arrow.style.transform = `rotate(${arrowDegrees}deg)`;
 
         windSpeed.innerHTML = "("+relevant_times[i].parameters[14].values+")"
@@ -94,3 +109,20 @@ function appendOrientedArrow(relevant_times){
         TABLE_TODAY.rows[i+1].cells[3].appendChild(windSpeed)
       }
 }
+/*------------------------------
+Help function to get correct index for wind direction, as it variates.
+--------------------------------*/
+function getWindDirectionIndex(parameters_array){
+  let correct_index;
+  for (let j = 0; j < parameters_array.length; j++) {
+            if(parameters_array[j].name == "wd"){
+            correct_index = j;
+            break;
+            }
+      }
+      return correct_index;
+}
+
+/*------------------------------
+Help function to get correct index for wind speed, as it variates!!!!
+--------------------------------*/
