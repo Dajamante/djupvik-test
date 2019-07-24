@@ -14,26 +14,40 @@ function main(){
     getResponse();
 }
 /*-------------
-My fetcher
+Fetcher
 -------------*/
 
 function getResponse(){
   fetch(API_ADRESS+LONGLAT)
   .then(response => response.json())
-  .then(data=> isolateRelevantTimes(data))
+  .then(data=> {
+    isolateRelevantTimes(data)
+  })
   .catch(error => console.dir(error))
 }
 
+/*-------------
+Helpfunction to get the data 6:00, 12:00, 18:00
+-------------*/
 function isolateRelevantTimes(data){
-  let relevant_times = []
-  for (let i = 0; i < data.timeSeries.length; i++) {
-        let current_time = new Date(data.timeSeries[i].validTime);
-        if ([6, 12, 18].includes(current_time.getHours())){
-           relevant_times.push(data.timeSeries[i])
+      let now = new Date().getHours();
+      let relevant_times = []
+
+      for (let i = 0; i < data.timeSeries.length; i++) {
+            let current_time = new Date(data.timeSeries[i].validTime);
+            if ([6, 12, 18].includes(current_time.getHours())){
+               relevant_times.push(data.timeSeries[i])
+          }
       }
-  }
+
+      if (now > new Date(relevant_times[0].validTime).getHours()){
+        /* if it's 14:00 we don't need 12:00 and delete the first time of the array
+        */
+        relevant_times.shift()
+      }
   createTable(relevant_times)
 }
+
 
 function createTable(relevant_times){
       for (let i = 0; i < 3; i++) {
@@ -47,39 +61,45 @@ function createTable(relevant_times){
       }
       console.dir(TABLE_TODAY)
       appendTemperature(TABLE_TODAY, relevant_times)
+      appendOrientedArrow(TABLE_TODAY, relevant_times)
 }
-
 
 
 function appendTemperature(TABLE_TODAY, relevant_times){
     console.dir(relevant_times)
     var options = { month: 'short', day: 'numeric', weekday: 'short'};
-    let now = new Date().getHours();
-
     for (let i = 0; i < 3; i++) {
-    /* smhi sometimes sends times that have already passed. Therefore we check if we go to the next
-    6AM, 12 PM or 18 PM*/
-        let formated_date;
-        let formated_hour;
-        let temperature;
-        let arrow = new Image(15, 15);
-        arrow.src = '../assets/images/small/arrow.jpg';
+        let formated_date = new Date(relevant_times[i].validTime).toLocaleDateString("sv-SV", options);
+        let formated_hour = new Date(relevant_times[i].validTime).getHours();
+        let temperature = relevant_times[i].parameters[11].values;
 
-        if(now > new Date(relevant_times[0].validTime).getHours()){
-            formated_date = new Date(relevant_times[i+1].validTime).toLocaleDateString("sv-SV", options);
-            formated_hour = new Date(relevant_times[i+1].validTime).getHours();
-            temperature = relevant_times[i+1].parameters[11].values;
-        }else{
-            formated_date = new Date(relevant_times[i].validTime).toLocaleDateString("sv-SV", options);
-            formated_hour = new Date(relevant_times[i].validTime).getHours();
-            temperature = relevant_times[i].parameters[11].values;
-        }
         console.dir("printing table today")
         console.dir(TABLE_TODAY)
         TABLE_TODAY.rows[i+1].cells[0].innerHTML = formated_date;
         TABLE_TODAY.rows[i+1].cells[1].innerHTML = formated_hour;
         TABLE_TODAY.rows[i+1].cells[2].innerHTML = temperature;
-        TABLE_TODAY.rows[i+1].cells[3].appendChild(arrow)
         }
+}
 
+function appendOrientedArrow(TABLE_TODAY, relevant_times){
+
+    for (let i = 0; i < 3; i++) {
+        let arrow = new Image(20, 20);
+        let windSpeed = document.createElement('div')
+        arrow.src = '../assets/images/small/arrow.jpg';
+        console.dir("printing arrow id")
+        arrow.id = 'wind_arrow_'+i;
+        console.dir(arrow.id)
+
+        let arrowDegrees = (relevant_times[i].parameters[13].level*10)
+        windSpeed.innerHTML = "("+relevant_times[i].parameters[14].level+")"
+        console.dir(arrowDegrees)
+        /* not working */
+        /*arrow.setAttribute('style','transform:rotate(arrowDegrees)');*/
+        document.getElementById(`wind_arrow_${i}`).style.color = 'red';
+
+        /* how to append next to each other*/
+        TABLE_TODAY.rows[i+1].cells[3].appendChild(arrow)
+        TABLE_TODAY.rows[i+1].cells[3].appendChild(windSpeed)
+      }
 }
