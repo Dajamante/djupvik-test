@@ -96,12 +96,11 @@ function appendOrientedArrow(relevant_times){
         console.dir("printing arrow id")
         arrow.id = 'wind_arrow_'+i;
         console.dir(arrow.id)
-        let arrowDegrees = (relevant_times[i].parameters[13].level*10)
+        let arrowDegrees = (relevant_times[i].parameters[13].level)
 
         /* not working */
         /*https://www.w3schools.com/jsref/prop_style_transform.asp*/
-        document.getElementById(`wind_arrow_${i}`).rotateX(arrowDegrees)
-
+        arrow.style.transform = `rotate(${arrowDegrees}deg)`;
 
         windSpeed.innerHTML = "("+relevant_times[i].parameters[14].level+")"
 
