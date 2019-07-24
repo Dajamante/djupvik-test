@@ -5,48 +5,48 @@ const LONGLAT = `api/category/pmp3g/version/2/geotype/point/lon/${LONGITUDE}/lat
 
 const TABLE_TODAY = document.querySelector("#table_today");
 
-document.addEventListener('load', main);
+addEventListener('load', main);
 
 function main(){
     removeEventListener('load', main);
     console.dir(TABLE_TODAY);
-    createTable();
+
+    getResponse();
 }
+/*-------------
+My fetcher
+-------------*/
 
 function getResponse(){
-        return fetch(API_ADRESS+LONGLAT).then(response=>{
-            return response.json()
-        .catch(err => {
-            console.log("Error reading data" + err);
-        })
-    })
+  fetch(API_ADRESS+LONGLAT)
+  .then(response => response.json())
+  .then(data=> isolateRelevantTimes(data))
+  .catch(error => console.dir(error))
 }
 
-function createTable(){
-    getResponse().then((resp) =>{
-        console.dir(resp)
-        let relevant_times = []
-        for (let i = 0; i < resp.timeSeries.length; i++) {
-            let current_time = new Date(resp.timeSeries[i].validTime);
-            if ([6, 12, 18].includes(current_time.getHours())){
-               relevant_times.push(resp.timeSeries[i])
-            }
-        }
+function isolateRelevantTimes(data){
+  let relevant_times = []
+  for (let i = 0; i < data.timeSeries.length; i++) {
+        let current_time = new Date(data.timeSeries[i].validTime);
+        if ([6, 12, 18].includes(current_time.getHours())){
+           relevant_times.push(data.timeSeries[i])
+      }
+  }
+  createTable(relevant_times)
+}
 
-        for (let i = 0; i < 3; i++) {
-            let row = document.createElement("tr")
-            for (let j = 0; j < 5; j++) {
-                let column = document.createElement("td");
-                row.appendChild(column);
-            }
-            console.dir(TABLE_TODAY)
-            TABLE_TODAY.appendChild(row);
-        }
-
-        console.dir(TABLE_TODAY)
-        appendTemperature(TABLE_TODAY, relevant_times)
-
-    })
+function createTable(relevant_times){
+      for (let i = 0; i < 3; i++) {
+          let row = document.createElement("tr")
+          for (let j = 0; j < 5; j++) {
+              let column = document.createElement("td");
+              row.appendChild(column);
+          }
+          console.dir(TABLE_TODAY)
+          TABLE_TODAY.appendChild(row);
+      }
+      console.dir(TABLE_TODAY)
+      appendTemperature(TABLE_TODAY, relevant_times)
 }
 
 
