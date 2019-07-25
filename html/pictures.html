@@ -5,26 +5,37 @@
 <head>
     <title>Pictures</title>
     <meta charset="utf-8" />
+
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="../assets/css/swipebox.css" />
-    <script src="../assets/js/jquery-2.1.0.min.js"></script>
+
+    <script src="../assets/js/jquery-3.0.0.min.js"></script>
     <script src="../assets/js/jquery.swipebox.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+
 </head>
 
 <body>
     <header>
-        <h1>Amazing pictures</h1>
-        <nav>
+
+        <nav class=navigation_menu id=nav_menu>
             <ul>
                 <li><a href="../index.html">Startsidan</a></li>
-                <li><a href="guestboat.html">Gästbåtar</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="turism.html">Turism</a></li>
+                <li><a href="../html/guestboat.html">Gästbåtar</a></li>
+                <li><a href="../html/kontakt.html">Kontakt</a></li>
+                <li><a href="../html/historia.html">Historia</a></li>
+                <li><a href="../html/turism.html">Turism</a></li>
             </ul>
         </nav>
+        <div class="navigation_menu-toggle">
+            <a href="#"><i class="fa fa-water"></i></a>
+        </div>
     </header>
+
+
     <main>
+        <h1>Amazing pictures</h1>
         <section id="pictures" class="pictures_container">
             <div class=horizontal>
                 <a href="../assets/images/big/D-2.jpg" class="swipebox" title="Fishing on the wave breaker">
@@ -161,11 +172,6 @@
 
     </main>
 </body>
-<script type="text/javascript">
-    $(document).ready(function () {
-        /* Basic Gallery */
-        $('.swipebox').swipebox();
-    });
-</script>
+
 
 </html>

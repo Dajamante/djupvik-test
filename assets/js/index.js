@@ -11,6 +11,7 @@ function main(){
     removeEventListener('load', main);
     getResponse();
 }
+
 /*-------------
 Fetcher
 -------------*/

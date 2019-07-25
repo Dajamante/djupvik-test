@@ -1,9 +1,16 @@
+
+
+/*-------------------------------------
+-------------------------------------*/
+
 .pictures_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(6, 200px);
-    grid-gap: 10px;
-    grid-auto-flow: dense;
+	grid-gap: 10px;
+	background-color: black;
+	grid-auto-flow: dense;
+	padding: 1%;
 }
 
 .pictures_container img {
@@ -28,4 +35,53 @@
 @media (max-width: 500px) {
     .pictures_container img {
         grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));}
+}
+
+
+/*-------------------------------------
+-------------------------------------*/
+
+.navigation_menu {
+	background:#f0f0f0;
+	display:none;
+	width:100%;
+}
+
+/*Gotland uses Tangerine color*/
+.fa{
+	font-size: 100%;
+	color: orangered;
+}
+.navigation_menu ul {
+	font-family: serif;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.navigation_menu ul li {
+	color:#333;
+	font-size:12px;
+	letter-spacing:2px;
+	padding:15px 0;
+	text-transform:uppercase;
+}
+.navigation_menu ul li:hover {
+	background:#e9e9e9;
+}
+.navigation_menu a {
+  text-decoration:none;
+	color: #333;
+}
+.navigation_menu-toggle {
+	background:none;
+    color: #333;
+	width:100%;
+	text-align:center;
+	padding:10px 0;
+	font-size:25px;
+}
+.navigation_menu-toggle a {
+	text-decoration:none;
+	color: #333;
 }
