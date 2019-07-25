@@ -2,7 +2,6 @@
 
 /*-------------------------------------
 -------------------------------------*/
-
 .pictures_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -85,3 +84,4 @@
 	text-decoration:none;
 	color: #333;
 }
+
