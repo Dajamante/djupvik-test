@@ -32,6 +32,9 @@ function getResponse(){
     /* this function does wind force and direction*/
     return appendOrientedArrow(array)
   })
+  .then(array=>{
+    return appendWeatherSymbol(array)
+  })
   .catch(error => console.dir(error))
 }
 
@@ -101,9 +104,8 @@ function appendOrientedArrow(relevant_times){
         arrow.src = '../assets/images/small/arrow.jpg';
         let wd_index = getCorrectIndex(relevant_times[i].parameters, "wd");
         let arrowDegrees = (relevant_times[i].parameters[wd_index].values)
-        /* +90 since my arrow is oriented east while smhi arrow is oriented south
-        yeah I know it's a quick image fix but...*/
-        arrow.style.transform = `rotate(${arrowDegrees+90}deg)`;
+
+        arrow.style.transform = `rotate(${arrowDegrees}deg)`;
 
         let windSpeedIndex = getCorrectIndex(relevant_times[i].parameters, "ws")
 
@@ -113,6 +115,20 @@ function appendOrientedArrow(relevant_times){
         TABLE_TEMPERATURES.rows[i+1].cells[3].appendChild(windSpeed)
       }
       return relevant_times
+}
+function appendWeatherSymbol(relevant_times){
+    for (let i = 0; i < 3; i++) {
+      console.dir(relevant_times)
+      let image_weather = new Image(20, 20)
+      let image_index = getCorrectIndex(relevant_times[i].parameters, "Wsymb2")
+      console.dir(image_index)
+      let image_weather_values = relevant_times[i].parameters[image_index].values[0];
+      console.dir(image_weather_values)
+      image_weather.src = '../assets/images/small/arrow.jpg'
+
+      TABLE_TEMPERATURES.rows[i+1].cells[4].appendChild(image_weather)
+
+    }
 }
 /*------------------------------
 Help function to get correct index for temperature, wind direction and wind force,
