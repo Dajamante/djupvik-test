@@ -73,7 +73,7 @@
   text-decoration:none;
 	color: #333;
 }
-.navigation_menu-toggle {
+.navigation_menu-toggle:not(.pictures_container) {
 	background:none;
     color: #333;
 	width:100%;
@@ -81,7 +81,7 @@
 	padding:10px 0;
 	font-size:25px;
 }
-.navigation_menu-toggle a {
+.navigation_menu-toggle a:not(.pictures_container) {
 	text-decoration:none;
 	color: #333;
 }
