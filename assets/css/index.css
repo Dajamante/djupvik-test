@@ -42,7 +42,6 @@ small, .text_small {font-size: 0.707em;}
 
 
 
-
 /*-------------------------------------
 need some highlighting tab and stuff
 -------------------------------------*/
@@ -50,6 +49,69 @@ need some highlighting tab and stuff
 textarea:focus {
 	background: pink;
   }
+
+
+/*-------------------------------------
+I followd this example:
+https://codepen.io/CrocoDillon/pen/GJclb
+-------------------------------------*/
+.kontakt_formular {
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto;
+	border-style: solid;
+}
+
+
+#contact_us_title{
+	text-align: center;
+	size: 2em;
+	margin-bottom: 2em;
+}
+
+.kontakt_formular h3 {
+	margin: 1em ;
+	color:  rgb(85, 14, 2);
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.kontakt_formular input, textarea {
+	width: 100%;
+	padding: 1em;
+	border: solid;
+}
+
+input[type="radio"]{
+	max-width: 30px;
+}
+
+.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"],textarea {
+	max-width: 200px;
+	margin: 0 0 2em;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+.kontakt_formularinput.invalid, textarea.invalid {
+	border-color: #d5144d;
+  }
+
+  textarea {
+	height: 10em;
+}
+
+input[type="submit"], button {
+	max-width: 80px;
+	position: center;
+	background: rgb(85, 14, 2);
+	color: beige;
+	border-radius: 20px;
+}
+
+input[type="submit"]:hover, button:hover {
+	background: orangered;
+}
 
 /*-------------------------------------
 -------------------------------------*/
@@ -112,6 +174,10 @@ textarea:focus {
 .fa{
 	font-size: 150%;
 	color:rgb(85, 14, 2);
+}
+
+.fa:hover{
+	color: orangered;
 }
 .navigation_menu ul {
 	font-family: 'Indie Flower', cursive;

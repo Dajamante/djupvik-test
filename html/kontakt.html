@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-
     <script src="../assets/js/jquery-3.0.0.min.js"></script>
     <script src="../assets/js/scripts.js"></script>
 
@@ -32,47 +31,37 @@
     </header>
 
     <main>
-        <h2>Kontaktformulär</h2>
+        <h2 id="contact_us_title">Kontakta oss!</h2>
+        <form class="kontakt_formular">
+            <h3>Vad gäller ditt ärende?</h3>
+            <select name="subject">
+                <option value="medlemskap">Medlemskap</option>
+                <option value="boatplace">Båtplats</option>
+                <option value="ovrigt">Övrigt</option>
+            </select>
 
-        <form accept-charset="UTF-8" action=#>
-            <legend>Ditt Ärende:</legend>
-            <fieldset>
-                <h3>Vad gäller ditt ärende?</h3>
-                <p><input type="checkbox" name="checkbox_arende_medlem" value="checkbox_arende_medlem"> Medlemskap<br>
-                    <input type="checkbox" name="checkbox_arende_boatplace" value="checkbox_arende_boatplace">
-                    Båtplats<br>
-                    <input type="checkbox" name="checkbox_arende_else" value="checkbox_arende_else" checked> Övrigt<br>
-                </p>
-            </fieldset>
-            <fieldset>
-                <h3>Rubrik för ärendet:</h3>
-                <p><label for="rubrik_issue">Titeln på ärende</label>
-                    <input type="text" name="rubrik_issue" id="rubrik_issue" placeholder="Rubrik för ditt ärende">
-                </p>
-                <p><label for="description_issue">Beskrivning av ärendet:</label>
-                    <textarea name="meddelande" rows="10" cols="30" id="Meddelande">
+            <h3>Fyll i dina uppgifter
+            </h3>
+            <p><label for="namn"></label></p>
+            <input type="text" name="namn" id="namn" required placeholder="Namn">
+            <p></p><label for="email"></label></p>
+            <input type="email" name="email" id="email" required placeholder="Ditt meljaddress">
+            <p></p><label for="tel"></label></p>
+            <input type="tel" name="tel" id="tel" required placeholder="Ditt telfonnummer">
+            <p></p><label for="tel">Meddelande:</label></p>
+            <p></p><textarea name="meddelande" rows="20" cols="30" id="Meddelande">
                 </textarea></p>
-            </fieldset>
-            <fieldset>
-                <h3>Hur ska vi kontakta dig?</h3>
-                <p>
-                    <input type="radio" name="contact_choice" value="contact_by_tel" checked> Telefon<br>
-                    <input type="radio" name="contact_choice" value="contact_by_mail"> Mail<br>
-                    <input type="radio" name="contact_choice" value="no_contact"> Inte alls<br>
-                </p>
-                <p><label for="namn">Namn:</label>
-                    <input type="text" name="namn" id="namn" required placeholder="Namn"></p>
-                <p><label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required placeholder="Ditt meljaddress"></p>
-                <p><label for="tel">Mobilnummer:</label>
-                    <input type="tel" name="tel" id="tel" required placeholder="Ditt telfonnummer"></p>
+            <p><input type="submit" value="Skicka" /></p>
 
-                </p>
-            </fieldset>
-            <fieldset>
-                <p><input type="submit" value="send_kontakt_form" /></p>
-            </fieldset>
+            <h3>Hur kan vi kontakta dig?</h3>
+            <div class="radio_buttons">
+                <input type="radio" name="contact_choice" value="contact_by_tel" checked> Telefon<br>
+                <input type="radio" name="contact_choice" value="contact_by_mail"> Mail<br>
+                <input type="radio" name="contact_choice" value="no_contact"> Inte alls<br>
+            </div>
+            <h3>
         </form>
+
 
         <h2>Kontaktuppgifter</h2>
         <p></p>Hamnfogde Bo Lautin, mobil 0707-920310
@@ -84,11 +73,13 @@
         <h2>Styrelse</h2>
         <ul>
             <p>Kommentar till dig som utvecklar sajten:
-                Tanken med en medlemssidan är att ni visar oss hur den delen skulle kunna se ut. Vi har information om
+                Tanken med en medlemssidan är att ni visar oss hur den delen skulle kunna se ut. Vi har information
+                om
                 aktuella händelser, vad som är på gång, kontaktuppgifter till styrelsen och protokollen från deras
                 möten.
 
-                Så denna sida vill vi se hur ni löser det med medlemslistan, dessa namn är då inte riktiga personer. Vi
+                Så denna sida vill vi se hur ni löser det med medlemslistan, dessa namn är då inte riktiga personer.
+                Vi
                 vill
                 ha det hela i en tabell.</p>
 
