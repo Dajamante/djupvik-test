@@ -41,6 +41,14 @@ h5 {font-size: 115%;}
 small, .text_small {font-size: 0.707em;}
 
 
+
+
+/*-------------------------------------
+-------------------------------------*/
+
+
+
+
 /*-------------------------------------
 -------------------------------------*/
 .pictures_container{
@@ -83,7 +91,7 @@ small, .text_small {font-size: 0.707em;}
 /*Gotland uses Tangerine color*/
 .fa{
 	font-size: 150%;
-	color:rgb(55, 9, 1);
+	color:rgb(85, 14, 2);
 }
 .navigation_menu ul {
 	font-family: 'Indie Flower', cursive;
@@ -92,14 +100,14 @@ small, .text_small {font-size: 0.707em;}
 	text-align:center;
 }
 .navigation_menu ul li {
-	color:#333;
+	color:rgb(6, 5, 5);
 	font-size:1.5em;
 	letter-spacing:1.5;
 }
 
 .navigation_menu a {
   	text-decoration:none;
-	color:#333;
+	color:rgb(6, 5, 5);
 }
 
 .navigation_menu ul li:hover {
@@ -110,7 +118,7 @@ small, .text_small {font-size: 0.707em;}
 }
 .navigation_menu-toggle:not(.pictures_container) {
 	background:none;
-    color: #333;
+    color: rgb(6, 5, 5);
 	width:100%;
 	text-align:center;
 	padding:10px 0;
