@@ -160,7 +160,7 @@ html.swipebox-html.swipebox-touch {
   right: 0;
   position: absolute;
   z-index: 9999;
-  background-position: 15px 12px;
+  background-position: 40px 40px;
 }
 
 .swipebox-no-close-button #swipebox-close {
@@ -266,7 +266,7 @@ html.swipebox-html.swipebox-touch {
 }
 @media screen and (min-width: 800px) {
   #swipebox-close {
-    right: 40px;
+    right: 10px;
   }
 
   #swipebox-arrows {
@@ -289,7 +289,15 @@ html.swipebox-html.swipebox-touch {
 
 #swipebox-top-bar {
   color: white !important;
-  font-size: 15px;
-  line-height: 43px;
+  font-size: 40px;
+  line-height: 100px;
   font-family: Helvetica, Arial, sans-serif;
 }
+
+@media screen and (min-width: 500px) {
+  #swipebox-top-bar {
+    font-size: 15px;
+    line-height: 43px;
+  }
+}
+
