@@ -125,7 +125,7 @@ function appendWeatherSymbol(relevant_times){
       console.dir(image_index)
       let image_weather_values = relevant_times[i].parameters[image_index].values[0];
       console.dir(image_weather_values)
-      image_weather.src = '../assets/images/small/arrow.jpg'
+      image_weather.src = `../assets/images/small/weather_icons_2/${image_weather_values}.png`
 
       TABLE_TEMPERATURES.rows[i+1].cells[4].appendChild(image_weather)
 
