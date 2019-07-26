@@ -120,7 +120,7 @@ function appendOrientedArrow(relevant_times){
 function appendWeatherSymbol(relevant_times){
     for (let i = 0; i < 3; i++) {
       console.dir(relevant_times)
-      let image_weather = new Image(20, 20)
+      let image_weather = new Image(60, 45)
       let image_index = getCorrectIndex(relevant_times[i].parameters, "Wsymb2")
       console.dir(image_index)
       let image_weather_values = relevant_times[i].parameters[image_index].values[0];
@@ -143,5 +143,5 @@ function getCorrectIndex(parameters_array, searchedItem){
             break;
             }
       }
-      return correct_index;
+  return correct_index;
 }
