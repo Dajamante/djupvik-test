@@ -160,7 +160,7 @@ html.swipebox-html.swipebox-touch {
   right: 0;
   position: absolute;
   z-index: 9999;
-  background-position: 40px 40px;
+  background-position: 15px 12px;
 }
 
 .swipebox-no-close-button #swipebox-close {
@@ -294,11 +294,13 @@ html.swipebox-html.swipebox-touch {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+
+
+
 /* This only work if the meta tag is allowed in html
 */
 @media (max-width:500px) {
   #swipebox-top-bar {
     font-size: 20px;
-    line-height: 50px;
   }
 }

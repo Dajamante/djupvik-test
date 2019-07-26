@@ -11,8 +11,19 @@ $(document).ready(function() {
 
 
 
+$(document).ready(function () {
+	/* Basic Gallery */
+	$('.swipebox').swipebox({
+		removeBarsOnMobile: false, // false will show top bar on mobile devices
+		hideBarsDelay: 30000, // delay before hiding bars on desktop
+		loopAtEnd: false // true will return to the first image after the last image is reached
+	});
+});
 
-var form = $('#contact'),
+
+
+
+var form = $('.kontakt_formular'),
     submit = form.find('[name="submit"]');
 
 form.on('submit', function(e) {
