@@ -60,7 +60,8 @@ textarea:focus {
 	grid-gap: 15px;
 	background-color: black;
 	grid-auto-flow: dense;
-	padding: 1%;
+	/*bordure*/
+	padding: 10px;
 }
 
 .pictures_container img {
@@ -87,19 +88,15 @@ textarea:focus {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr;
-	}
+	grid-template-rows: repeat(auto, 100px);
 
-	.horizontal {
-		grid-row: span 1;
-		grid-column: span 1;
 	}
 	.vertical {
 		grid-row: span 1;
-		grid-column: span 1;
 	}
 	.bigger {
+		grid-column: span 2;
 		grid-row: span 1;
-		grid-column: span 1;
 	}
   }
 
