@@ -46,9 +46,7 @@ small, .text_small {font-size: 0.707em;}
 need some highlighting tab and stuff
 -------------------------------------*/
 
-textarea:focus {
-	background: pink;
-  }
+
 
 
 /*-------------------------------------
@@ -93,25 +91,37 @@ input[type="radio"]{
 	outline: none;
 }
 
-.kontakt_formularinput.invalid, textarea.invalid {
-	border-color: #d5144d;
-  }
+.kontakt_formular input.invalid, textarea.invalid {
+	border-color: #ff4500;
+}
+
 
   textarea {
 	height: 10em;
 }
 
-input[type="submit"], button {
+input[type="submit"]{
 	max-width: 80px;
 	position: center;
-	background: rgb(85, 14, 2);
+	background-color: rgb(85, 14, 2);
 	color: beige;
 	border-radius: 20px;
+	transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover, button:hover {
-	background: orangered;
+input[type="submit"]:hover{
+	background-color: orangered;
 }
+
+textarea:focus {
+	background: rgba((255,69,0.0.7));
+}
+
+.kontakt_formular .radio_buttons{
+	display: flex;
+	justify-content: center;
+}
+
 
 /*-------------------------------------
 -------------------------------------*/
@@ -170,10 +180,13 @@ input[type="submit"]:hover, button:hover {
 	width:100%;
 }
 
-/*Gotland uses Tangerine color*/
-.fa{
+/*Gotland uses Tangerine color */
+/* Gotland.se uses brown colors */
+.fa {
 	font-size: 150%;
 	color:rgb(85, 14, 2);
+	/*not working*/
+	transition: color 0.3s ease;
 }
 
 .fa:hover{
