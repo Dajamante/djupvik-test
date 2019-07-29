@@ -275,15 +275,15 @@ Pages grid styling.
 	grid-template-rows: 2fr 0.5fr 1fr;
 	grid-template-areas: "general" "tempest" "namnforklaring";
 }
-.summary_historia {
+#djupvik_historia_main #summary_historia {
 	grid-area: "general";
 }
 
-.tempest{
+#djupvik_historia_main #tempest{
 	grid-area: "tempest";
 }
 
-.namnforklaring{
+#djupvik_historia_main #namnforklaring{
 	grid-area: "namnforklaring"
 }
 
