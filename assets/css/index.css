@@ -184,7 +184,7 @@ Pages grid styling.
 #startpage_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 3fr 1fr;
+	grid-template-rows: 30%fr 50%fr 20fr;
 	grid-template-areas: "djupvik_presentation" "djupvik_news" "footer";
 }
 
@@ -235,13 +235,13 @@ Pages grid styling.
 	grid-area: "footer";
 }
 
-/* kontakt */
 
+/* kontakt */
 #kontakt_container {
 	display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4fr 1fr 1fr;
-  grid-template-areas: "form" "styrelse" "footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr 1fr 1fr;
+	grid-template-areas: "form" "styrelse" "footer";
 }
 
 #kontakt_main {
@@ -255,37 +255,38 @@ Pages grid styling.
 	grid-area: "footer";
 }
 
-/* historia */
 
+
+/* historia */
 #historia_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 4fr 1fr;
-  	grid-template-areas: "main" "footer";
-}
-
-#djupvik_historia_main{
-	grid-area: "main";
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 4fr 1fr 1fr;
-	grid-template-areas: "general" "tempest" "namnforklaring";
-}
-#summary_historia {
-	grid-area: "general";
-}
-
-#tempest{
-	grid-area: "tempest";
-}
-
-#namnforklaring{
-	grid-area: "namnforklaring"
+	grid-template-rows: 8fr 1fr;
+  	grid-template-areas: "hist" "footer";
 }
 
 #historia_footer {
 	grid-area: "footer";
 }
+#djupvik_historia_main{
+	grid-area: "hist";
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 0.5fr 1fr;
+	grid-template-areas: "general" "tempest" "namnforklaring";
+}
+.summary_historia {
+	grid-area: "general";
+}
+
+.tempest{
+	grid-area: "tempest";
+}
+
+.namnforklaring{
+	grid-area: "namnforklaring"
+}
+
 
 
 /*-------------------------------------
