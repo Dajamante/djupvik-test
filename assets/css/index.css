@@ -287,9 +287,9 @@ Pages grid styling.
 }
 
 
-
-
-/* pictures */
+/* pictures
+tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
+*/
 
 #pictures_page_container {
 	grid-template-columns: 1fr;
