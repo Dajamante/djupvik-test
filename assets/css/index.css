@@ -123,21 +123,21 @@ textarea:focus {
 }
 
 .navigation_menu {
-	background:#f0f0f0;
+	background: rgba(59, 46, 45, 0.1);
 	display:none;
 	width:100%;
 }
 
 /*Gotland uses Tangerine color */
 /* Gotland.se uses brown colors */
-.fa {
+.fa-water {
 	font-size: 150%;
 	color:rgb(85, 14, 2);
 	/*not working*/
 	transition: color 0.3s ease;
 }
 
-.fa:hover{
+.fa-water:hover{
 	color: orangered;
 }
 .navigation_menu ul {
@@ -351,10 +351,9 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
   }
 
 /*--------------------------
-table
+unified table
 ---------------------------*/
 .unified_style_table {
-	font-size: 90%;
 	border-collapse: separate;
 	width: 100%;
 	border: solid;
@@ -365,4 +364,30 @@ table
 text-align: center;
 padding: 8px;
 }
-.unified_style_table tr:nth-child(even) {background-color: rgba(85, 14, 2, 0.2);}
+.unified_style_table tr:nth-child(even) {background-color:  rgb(34, 7, 3); color: beige;}
+
+/*--------------------------
+unified footer
+---------------------------*/
+
+.footer{
+	margin-top: 2em;
+	padding-top: 1em;
+	background: rgb(59, 46, 45);
+	font-size: 110%;
+	color: beige;
+	align-content: center;
+	text-align: center;
+}
+.fa-home, .fa-mobile-alt{
+	padding-right: 10px;
+}
+
+figure#hamnen_dag_photo {
+	align-self: center;
+	text-align: center;
+}
+figure#hamnen_dag_photo > img{
+	width: 10%;
+
+}
