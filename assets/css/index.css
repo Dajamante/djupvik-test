@@ -289,21 +289,19 @@ Pages grid styling.
 
 
 
-/*-------------------------------------
--------------------------------------*/
 
 /* pictures */
 
 #pictures_page_container {
 	grid-template-columns: 1fr;
 	grid-template-rows: 5fr 1fr;
-	grid-template-areas: "pictures_main" "footer";}
+	grid-template-areas: "pic_main" "footer";}
 
-#pictures_page_container .footer {
+#pictures_page_container #pictures_footer{
 	  grid-area: "footer";
 }
 
-#pictures_main {
+#pictures_page_container #pictures_main {
 	display: grid;
 	grid-area: "pictures_main";
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -314,37 +312,37 @@ Pages grid styling.
 	padding:3px;
 }
 
-#pictures_main img {
+#pictures_page_container #pictures_main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-#pictures_main .horizontal {
+#pictures_page_container #pictures_main .horizontal {
     grid-column: span 2;
 }
 
-#pictures_main .vertical {
+#pictures_page_container #pictures_main .vertical {
     grid-row: span 2;
 }
 
-#pictures_main .bigger {
+#pictures_page_container #pictures_main .bigger {
     grid-column: span 2;
     grid-row: span 2;
 }
 
 @media (max-width:500px) {
-	#pictures_main {
+	#pictures_page_container #pictures_main {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(auto, 100px);
 
 	}
-	#pictures_main .vertical {
+	#pictures_page_container #pictures_main .vertical {
 		grid-row: span 1;
 	}
-	#pictures_main .bigger {
+	#pictures_page_container #pictures_main .bigger {
 		grid-column: span 2;
 		grid-row: span 1;
 	}
