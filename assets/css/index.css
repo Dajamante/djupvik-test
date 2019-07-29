@@ -91,11 +91,6 @@ input[type="radio"]{
 	outline: none;
 }
 
-.kontakt_formular input.invalid, textarea.invalid {
-	border-color: #ff4500;
-}
-
-
   textarea {
 	height: 10em;
 }
@@ -120,60 +115,10 @@ textarea:focus {
 .kontakt_formular .radio_buttons{
 	display: flex;
 	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
-
-/*-------------------------------------
--------------------------------------*/
-.pictures_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(6, 200px);
-	grid-gap: 15px;
-	background-color: black;
-	grid-auto-flow: dense;
-	/*bordure*/
-	padding: 10px;
-}
-
-.pictures_container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-.horizontal {
-    grid-column: span 2;
-}
-
-.vertical {
-    grid-row: span 2;
-}
-
-.bigger {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-@media (max-width:500px) {
-.pictures_container {
-	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(auto, 100px);
-
-	}
-	.vertical {
-		grid-row: span 1;
-	}
-	.bigger {
-		grid-column: span 2;
-		grid-row: span 1;
-	}
-  }
-
-/*-------------------------------------
--------------------------------------*/
 .navigation_menu {
 	background:#f0f0f0;
 	display:none;
@@ -228,3 +173,181 @@ textarea:focus {
 	color: rgb(51, 51, 51);
 }
 
+
+
+
+
+/*-------------------------------------
+Pages grid styling.
+-------------------------------------*/
+/* index */
+#startpage_container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 3fr 1fr;
+	grid-template-areas: "djupvik_presentation" "djupvik_news" "footer";
+}
+
+#djupvik_presentation{
+	grid-area: "djupvik_presentation";
+}
+#news{
+	grid-area: "djupvik_news";
+}
+
+#djupvik_footer{
+	grid-area: "footer";
+}
+
+/* guestboats */
+#guestboat_container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: "guestboat_text" "guestboat_table" "footer";
+}
+
+#djupvik_presentation{
+	grid-area: "guestboat_text";
+}
+#news{
+	grid-area: "guestboat_table";
+}
+
+#djupvik_footer{
+	grid-area: "footer";
+}
+
+
+
+/* turism */
+
+#turism_container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 5fr 1fr;
+	grid-template-areas: "main" "footer";
+}
+#turism_main {
+	grid-area: "main";
+}
+#turism_footer {
+	grid-area: "footer";
+}
+
+/* kontakt */
+
+#kontakt_container {
+	display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-areas: "form" "styrelse" "footer";
+}
+
+#kontakt_main {
+	grid-area: "form";
+}
+
+#styrelse_info{
+	grid-area: "styrelse";
+}
+#kontakt_footer {
+	grid-area: "footer";
+}
+
+/* historia */
+
+#historia_container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr 1fr;
+  	grid-template-areas: "main" "footer";
+}
+
+#djupvik_historia_main{
+	grid-area: "main";
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr 1fr 1fr;
+	grid-template-areas: "general" "tempest" "namnforklaring";
+}
+#summary_historia {
+	grid-area: "general";
+}
+
+#tempest{
+	grid-area: "tempest";
+}
+
+#namnforklaring{
+	grid-area: "namnforklaring"
+}
+
+#historia_footer {
+	grid-area: "footer";
+}
+
+
+/*-------------------------------------
+-------------------------------------*/
+
+/* pictures */
+
+#pictures_page_container {
+	grid-template-columns: 1fr;
+	grid-template-rows: 5fr 1fr;
+	grid-template-areas: "pictures_main" "footer";}
+
+#pictures_page_container .footer {
+	  grid-area: "footer";
+}
+
+#pictures_main {
+	display: grid;
+	grid-area: "pictures_main";
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(5, 200px);
+	grid-gap: 3px;
+	grid-auto-flow: dense;
+	/*bordure*/
+	padding:3px;
+}
+
+#pictures_main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#pictures_main .horizontal {
+    grid-column: span 2;
+}
+
+#pictures_main .vertical {
+    grid-row: span 2;
+}
+
+#pictures_main .bigger {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media (max-width:500px) {
+	#pictures_main {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(auto, 100px);
+
+	}
+	#pictures_main .vertical {
+		grid-row: span 1;
+	}
+	#pictures_main .bigger {
+		grid-column: span 2;
+		grid-row: span 1;
+	}
+  }
+
+/*-------------------------------------
+-------------------------------------*/

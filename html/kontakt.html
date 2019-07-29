@@ -30,61 +30,42 @@
         </div>
     </header>
 
-    <main>
-        <h2 id="contact_us_title">Kontakta oss!</h2>
-        <form class="kontakt_formular">
-            <h3>Vad gäller ditt ärende?</h3>
-            <select name="subject">
-                <option value="medlemskap">Medlemskap</option>
-                <option value="boatplace">Båtplats</option>
-                <option value="ovrigt">Övrigt</option>
-            </select>
+    <div id="kontakt_container">
+        <main id="kontakt_main">
+            <h2 id="contact_us_title">Kontakta oss!</h2>
+            <form class="kontakt_formular">
+                <h3>Vad gäller ditt ärende?</h3>
+                <select name="subject">
+                    <option value="medlemskap">Medlemskap</option>
+                    <option value="boatplace">Båtplats</option>
+                    <option value="ovrigt">Övrigt</option>
+                </select>
 
-            <h3>Fyll i dina uppgifter
-            </h3>
-            <p><label for="namn"></label></p>
-            <input type="text" name="namn" id="namn" required placeholder="Namn">
-            <p></p><label for="email"></label></p>
-            <input type="email" name="email" id="email" required placeholder="Ditt meljaddress">
-            <p></p><label for="tel"></label></p>
-            <input type="tel" name="tel" id="tel" required placeholder="Ditt telfonnummer">
-            <p></p><label for="tel">Meddelande:</label></p>
-            <p></p><textarea name="meddelande" rows="20" cols="30" id="Meddelande">
+                <h3>Fyll i dina uppgifter
+                </h3>
+                <p><label for="namn"></label></p>
+                <input type="text" name="namn" id="namn" required placeholder="Namn">
+                <p><label for="email"></label></p>
+                <input type="email" name="email" id="email" required placeholder="Ditt meljaddress">
+                <p><label for="tel"></label></p>
+                <input type="tel" name="tel" id="tel" required placeholder="Ditt telfonnummer">
+                <p><label for="tel">Meddelande:</label></p>
+                <p><textarea placeholder="Skriv ditt meddelande här" name="meddelande" rows="20" cols="30"
+                        id="meddelande">
                 </textarea></p>
-            <p><input type="submit" value="Skicka" /></p>
+                <p><input type="submit" value="Skicka" /></p>
 
-            <h3>Hur kan vi kontakta dig?</h3>
-            <div class="radio_buttons">
-                <input type="radio" name="contact_choice" value="contact_by_tel" checked> Telefon<br>
-                <input type="radio" name="contact_choice" value="contact_by_mail"> Mail<br>
-                <input type="radio" name="contact_choice" value="no_contact"> Inte alls<br>
-            </div>
-            <h3>
-        </form>
-
-
-        <h2>Kontaktuppgifter</h2>
-        <p></p>Hamnfogde Bo Lautin, mobil 0707-920310
-
-        Djupviks hamnförening
-        c/o Ekholm
-        Eksta Hägur 170
-        623 54 Klintehamn
-        <h2>Styrelse</h2>
-        <ul>
-            <p>Kommentar till dig som utvecklar sajten:
-                Tanken med en medlemssidan är att ni visar oss hur den delen skulle kunna se ut. Vi har information
-                om
-                aktuella händelser, vad som är på gång, kontaktuppgifter till styrelsen och protokollen från deras
-                möten.
-
-                Så denna sida vill vi se hur ni löser det med medlemslistan, dessa namn är då inte riktiga personer.
-                Vi
-                vill
-                ha det hela i en tabell.</p>
-
-
-            Info:
+                <h3>Hur kan vi kontakta dig?</h3>
+                <div class="radio_buttons">
+                    <input type="radio" name="contact_choice" value="contact_by_tel" checked> Telefon</input>
+                    <input type="radio" name="contact_choice" value="contact_by_mail"> Mail</input>
+                    <input type="radio" name="contact_choice" value="no_contact"> Inte alls</input>
+                </div>
+                <h3>
+            </form>
+        </main>
+        <aside id="styrelse_info">
+            <h2>Styrelse</h2>
             <li>Erik Ekholm, erik@djupvik.se, 070-123 45 67</li>
 
 
@@ -102,10 +83,18 @@
 
             <li>Lars Bengtsson, lars@djupvik.se, 076-789 01 23</li>
 
+            </ul>
+        </aside>
+        <footer id="kontakt_footer" class="footer">
+            <h2>Kontaktuppgifter</h2>
+            <p></p>Hamnfogde Bo Lautin, mobil 0707-920310
 
-
-        </ul>
-    </main>
+            Djupviks hamnförening
+            c/o Ekholm
+            Eksta Hägur 170
+            623 54 Klintehamn
+        </footer>
+    </div>
 </body>
 
 </html>
