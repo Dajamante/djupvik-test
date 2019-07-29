@@ -93,7 +93,7 @@ function appendTemperatures(relevant_times){
 
         TABLE_TEMPERATURES.rows[i+1].cells[0].innerHTML = formated_date;
         TABLE_TEMPERATURES.rows[i+1].cells[1].innerHTML = formated_hour+":00";
-        TABLE_TEMPERATURES.rows[i+1].cells[2].innerHTML = Correct;
+        TABLE_TEMPERATURES.rows[i+1].cells[2].innerHTML = Correct + " °C";
         }
         return relevant_times;
 }

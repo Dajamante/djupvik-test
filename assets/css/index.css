@@ -6,7 +6,7 @@ Oxygen theme
 
 @import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Indie+Flower:400');
 
-html {font-size: 16px;}
+html {font-size: 13px;}
 
 body {
   background-color: white;
@@ -14,6 +14,9 @@ body {
   font-weight: 400;
   line-height: 1.45;
   color: #333;
+	margin-left: 1em;
+	margin-right: 1em;
+
 }
 
 p {margin-bottom: 1.25em;}
@@ -166,7 +169,6 @@ textarea:focus {
 	width:100%;
 	text-align:center;
 	padding:10px 0;
-	font-size:25px;
 }
 .navigation_menu-toggle a:not(.pictures_container) {
 	text-decoration:none;
@@ -184,7 +186,7 @@ Pages grid styling.
 #startpage_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 30%fr 50%fr 20fr;
+	grid-template-rows: 30% 50% 20fr;
 	grid-template-areas: "djupvik_presentation" "djupvik_news" "footer";
 }
 
@@ -203,7 +205,7 @@ Pages grid styling.
 #guestboat_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
 	grid-template-areas: "guestboat_text" "guestboat_table" "footer";
 }
 
@@ -240,7 +242,7 @@ Pages grid styling.
 #kontakt_container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 4fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
 	grid-template-areas: "form" "styrelse" "footer";
 }
 
@@ -260,8 +262,8 @@ Pages grid styling.
 #historia_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 8fr 1fr;
-  	grid-template-areas: "hist" "footer";
+	grid-template-rows: 80% 20%;
+	grid-template-areas: "hist" "footer";
 }
 
 #historia_footer {
@@ -271,7 +273,8 @@ Pages grid styling.
 	grid-area: "hist";
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 0.5fr 1fr;
+	/* solves the overlapping issue!*/
+	grid-template-rows: auto auto auto;
 	grid-template-areas: "general" "tempest" "namnforklaring";
 }
 #djupvik_historia_main #summary_historia {
@@ -347,3 +350,19 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 	}
   }
 
+/*--------------------------
+table
+---------------------------*/
+.unified_style_table {
+	font-size: 90%;
+	border-collapse: separate;
+	width: 100%;
+	border: solid;
+	border-style: ridge;
+}
+
+.unified_style_table th, td {
+text-align: center;
+padding: 8px;
+}
+.unified_style_table tr:nth-child(even) {background-color: rgba(85, 14, 2, 0.2);}
