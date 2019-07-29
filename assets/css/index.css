@@ -72,7 +72,7 @@ https://codepen.io/CrocoDillon/pen/GJclb
 
 .kontakt_formular h3 {
 	margin: 1em ;
-	color:  rgb(85, 14, 2);
+	color:  rgb(59, 46, 45);
 	font-size: 1.5em;
 	font-weight: 400;
 }
@@ -101,7 +101,7 @@ input[type="radio"]{
 input[type="submit"]{
 	max-width: 80px;
 	position: center;
-	background-color: rgb(85, 14, 2);
+	background-color: rgb(34, 7, 3);
 	color: beige;
 	border-radius: 20px;
 	transition: background-color 0.3s ease;
@@ -132,7 +132,7 @@ textarea:focus {
 /* Gotland.se uses brown colors */
 .fa-water {
 	font-size: 150%;
-	color:rgb(85, 14, 2);
+	color:rgb(59, 46, 45);
 	/*not working*/
 	transition: color 0.3s ease;
 }
@@ -158,7 +158,7 @@ textarea:focus {
 }
 
 .navigation_menu ul li:hover {
-	background: rgb(55, 9, 1);;
+	background: rgb(59, 46, 45);
 }
 .navigation_menu .navigation_link:hover a{
 	color:beige;
@@ -227,7 +227,7 @@ Pages grid styling.
 #turism_container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 5fr 1fr;
+	grid-template-rows: auto auto;
 	grid-template-areas: "main" "footer";
 }
 #turism_main {
@@ -381,6 +381,7 @@ unified footer
 }
 .fa-home, .fa-mobile-alt{
 	padding-right: 10px;
+	font-size: 120%;
 }
 
 figure#hamnen_dag_photo {
@@ -388,6 +389,7 @@ figure#hamnen_dag_photo {
 	text-align: center;
 }
 figure#hamnen_dag_photo > img{
-	width: 10%;
+	width: 20vw;
+	border: solid;
 
 }
