@@ -1,20 +1,9 @@
-
-
-function myFunction() {
-
-let dots = document.getElementById("dots");
-console.dir(dots)
-let moreText = document.getElementById("more");
-console.dir(moreText)
-let btnText = document.getElementById("myBtn");
-
-if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-} else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
+$(document).ready(function() {
+    $(document).ready(function(e){
+			$(".read_more_toggle button").click(function(e){
+				/* there was a conflict with swipebox */
+				e.stopPropagation();
+				$(".read_more").slideToggle(700)
+			});
+		});
+});
