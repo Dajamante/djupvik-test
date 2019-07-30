@@ -183,7 +183,7 @@ Pages grid styling.
 .startpage_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 30% 50% 20%;
+	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 	grid-template-areas: 'start_a' 'start_b' 'start_c';
 }
