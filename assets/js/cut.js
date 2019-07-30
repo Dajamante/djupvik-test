@@ -7,11 +7,11 @@ $(document).ready(function() {
 
 				let target_button = $("#myBtn")[0];
 
-				if(target_button.innerText=="Read more"){
-					target_button.innerText = "Read less"
+				if(target_button.innerText=="more..."){
+					target_button.innerText = "less!"
 				}
-				else if(target_button.innerText=="Read less"){
-					target_button.innerText = "Read more"
+				else if(target_button.innerText=="less!"){
+					target_button.innerText = "more..."
 				}
 			});
 		});

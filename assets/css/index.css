@@ -6,7 +6,7 @@ Oxygen theme
 
 @import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Indie+Flower:400');
 
-html {font-size: 14px;}
+html {font-size: 15px;}
 
 * main, aside, body {
 	background-color: white;
@@ -16,7 +16,7 @@ html {font-size: 14px;}
 	color: rgb(2, 0, 0);
 	margin-left: 1em;
 	margin-right: 1em;
-
+	grid-auto-rows: minmax(300px, auto)
 }
 
 h1, h2, h3, h4, h5 {
@@ -98,7 +98,7 @@ input[type="radio"]{
 	height: 10em;
 }
 
-input[type="submit"]{
+.hover_button{
 	max-width: 80px;
 	position: center;
 	background-color: rgb(34, 7, 3);
@@ -107,7 +107,7 @@ input[type="submit"]{
 	transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover{
+.hover_button:hover{
 	background-color: orangered;
 }
 
@@ -204,6 +204,8 @@ Pages grid styling.
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
+	grid-auto-rows: minmax(300px, auto);
+
 	grid-template-areas: "guestboat_text" "guestboat_table" "footer";
 }
 
@@ -226,6 +228,8 @@ Pages grid styling.
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
+	grid-auto-rows: minmax(300px, auto);
+
 	grid-template-areas: "main" "footer";
 }
 #turism_main {
@@ -241,6 +245,8 @@ Pages grid styling.
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
+	grid-auto-rows: minmax(300px, auto);
+
 	grid-template-areas: "form" "styrelse" "footer";
 }
 
@@ -261,6 +267,8 @@ Pages grid styling.
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 80% 20%;
+	grid-auto-rows: minmax(300px, auto);
+
 	grid-template-areas: "hist" "footer";
 }
 
@@ -273,6 +281,8 @@ Pages grid styling.
 	grid-template-columns: 1fr;
 	/* solves the overlapping issue!*/
 	grid-template-rows: auto auto auto;
+	grid-auto-rows: minmax(300px, auto);
+
 	grid-template-areas: "general" "tempest" "namnforklaring";
 }
 #djupvik_historia_main #summary_historia {
@@ -408,3 +418,10 @@ figure#hamnen_dag_photo > img{
 
 .read_more {display: none;}
 
+.read_more_toggle, .konrad_wrapper {
+	text-align: center;
+}
+/* it uses class hover button but the padding must be bigger*/
+#myBtn{
+	padding: 1em;
+}
