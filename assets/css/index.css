@@ -1,57 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Amita:400|Indie+Flower:400');
+
+/*--------------------------------------
+reset
+---------------------------------------*
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of reset */
+
 
 
 /*-------------------------------------
-Oxygen theme
+Poppins or Oxygen(?) theme
 -------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Amita:400|Indie+Flower:400');
+
 :root {
 	--classic_brown:  rgb(59, 46, 45);
 	--highlights: orangered;
 }
-html {font-size: 16px;}
-
-main, aside, body, ul, li {
-	background-color: white;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
-	line-height: 1.5em;
-	color: rgb(2, 0, 0);
-	margin-left: 1em;
-	margin-right: 1em;
-	grid-auto-rows: minmax(300px, auto)
+html body{
+font-size: 16px;
+padding: 2em 2em 2em 2em;
 }
 
-h1, h2, h3, h4, h5, body {
-  margin: 2.75rem 0 1rem;
-  font-family: 'Oxygen', sans-serif;
+* html h1, h2, h3, h4, h5, body {
+  text-align: left;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.8;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 200%;
+	font-family: "Indie Flower", sans-serif;
+	font-size: 400%;
+	margin-bottom: 4vw;
 }
 
-h2 {font-size: 175%;}
+h2 {margin-top: 4vw;
+	font-size: 165%;}
 
-h3 {font-size: 150%;}
+h3 {
+	margin-top: 4vw;
+	font-size: 150%;}
 
 h4 {font-size: 125%;;}
 
 h5 {font-size: 115%;}
 
+html body{
+	font-family: 'Poppins', sans-serif;
+}
+
 small, .text_small {font-size: 0.707em;}
-
-
-
-/*-------------------------------------
-need some highlighting tab and stuff
--------------------------------------*/
-
-
-
 
 /*-------------------------------------
 I followd this example:
@@ -66,7 +112,6 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	margin-bottom: 2em;
 }
 
-
 #kontakta_oss_title {
 	text-align: center;
 	margin-bottom: 1em;
@@ -80,7 +125,6 @@ https://codepen.io/CrocoDillon/pen/GJclb
 }
 
 .kontakt_formular input, textarea {
-	font-style: inherit;
 	width: 100%;
 	padding: 1em;
 	border: solid;
@@ -90,13 +134,12 @@ input[type="radio"]{
 	max-width: 30px;
 }
 
-.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"], textarea {
+.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"], #meddelande {
 	max-width: 200px;
 	margin: 0 0 2em;
 	border: 1px solid #ccc;
 	outline: none;
 }
-
 
 .hover_button{
 	max-width: 80px;
@@ -109,10 +152,10 @@ input[type="radio"]{
 .hover_button:hover{
 	background-color: var(--highlights);
 }
-.kontakt_formular textarea {
+.kontakt_formular #meddelande {
 	height: 10em;
 }
-.kontakt_formular input[type="text"]:focus, input[type="email"]:focus,  input[type="tel"]:focus, textarea:focus {
+.kontakt_formular input[type="text"]:focus, input[type="email"]:focus,  input[type="tel"]:focus, #meddelande:focus {
 	background:rgb(245, 245, 220);
 }
 
@@ -124,12 +167,16 @@ input[type="radio"]{
 }
 
 
-
-/*Gotland uses Tangerine color and Gotland.se uses brown colors */
+/*------------------------------------------------------------------------------
+Nav menu
+Gotland uses Tangerine color and Gotland.se uses brown colors
+--------------------------------------------------------------------------------*/
 .fa-water {
 	font-size: 150%;
 	color:var(--classic_brown);
-	/*not working*/
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
 	transition: color 0.3s ease;
 }
 
@@ -137,45 +184,44 @@ input[type="radio"]{
 	color: var(--highlights);
 }
 
-.navigation_menu ul li {
-	font-family: 'Indie Flower', cursive;
-	list-style:none;
-	padding:0;
-	text-align:center;
+* header {
+	margin: 0;
+	padding: 0;
 }
-.navigation_menu ul li {
-	color:rgb(6, 5, 5);
-	font-size:1.5em;
-	letter-spacing: 2px;
-}
+
 .navigation_menu {
-	background: rgba(59, 46, 45, 0.1);
+	width: 100%;
+	list-style:none;
+	text-align:center;
+	font-size:1.5em;
+	letter-spacing: 3px;
+	background-color: rgba(59, 46, 45, 0.1);
+	margin: 0;
+	padding: 0;
 	display:none;
 	width:100%;
 }
 
 .navigation_menu a {
+	font-family: 'Indie Flower', cursive;
   	text-decoration:none;
-	color:rgb(6, 5, 5);
+	color:var(--classic_brown);
+	font-weight: bold;
 }
 
-.navigation_menu ul li:hover {
+.navigation_link:hover {
+	width: 100%;
 	background: var(--classic_brown);
 }
-.navigation_menu .navigation_link:hover a{
+.navigation_link:hover a{
+	width: 100%;
 	color:beige;
 }
-.navigation_menu-toggle:not(.pictures_container) {
-	background:none;
-    color: rgb(6, 5, 5);
+.navigation_menu-toggle {
+	width: 100%;
+    color: var(--classic_brown);
 	width:100%;
 	text-align:center;
-	padding:10px 0;
-}
-
-.navigation_menu-toggle a:not(.pictures_container) {
-	text-decoration:none;
-	color: rgb(51, 51, 51);
 }
 
 /*-------------------------------------
@@ -255,7 +301,6 @@ Pages grid styling and internal styling
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
-
 	grid-template-areas: "kontakt_a" "kontakt_b" "kontakt_c";
 }
 
@@ -269,7 +314,6 @@ Pages grid styling and internal styling
 #kontakt_footer {
 	grid-area: kontakt_c;
 }
-
 
 /* ------------------------------historia------------------------------- */
 #historia_container{
@@ -327,9 +371,9 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 	display: inline-block;
 	margin-left: -1.3em; /* same as padding-left set on li */
 	width: 1.3em; /* same as padding-left set on li */
-  }
+}
 
-  #namnforklaring li:after {
+#namnforklaring li:after {
 	content: "\f10e";
 	font-family: FontAwesome;
 	color: var(--classic_brown);
