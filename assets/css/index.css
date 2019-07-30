@@ -54,12 +54,9 @@ table {
 
 /* End of reset */
 
-
-
 /*-------------------------------------
 Poppins or Oxygen(?) theme
 -------------------------------------*/
-
 
 :root {
 	--classic_brown:  rgb(59, 46, 45);
@@ -194,10 +191,12 @@ input[type="radio"]{
 	justify-content: center;
 }
 
-#kontakt_main h2:nth-child(3), p{
+#styrelse_info h2:nth-child(1){
 	text-align: center;
 }
-
+#styrelse_info p{
+	text-align: center;
+}
 /*
 solution
 https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-and-how-to-remove-it
@@ -434,7 +433,6 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 
 #namnforklaring {
 	list-style: none;
-
 }
 
 .namnforklaring_list_item{
@@ -572,7 +570,6 @@ figure#hamnen_dag_photo {
 figure#hamnen_dag_photo > img{
 	width: 20vw;
 	border: solid;
-
 }
 
 /* overriding blue select2*/

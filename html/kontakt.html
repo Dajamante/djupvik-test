@@ -78,8 +78,12 @@
                     <label for="mail_radio_id">Inte alls</label>
                 </div>
             </form>
-            <h2 id="kontakta_styrelse_title">Kontakta vår styrelse!</h2>
-            <p>Tveka inte att höra av dig till vår styrelsen. Dag och natt, kan dem lämpa dig, <strong>speciellt
+
+
+        </main>
+        <aside id="styrelse_info">
+            <h2>Kontakta vår styrelse!</h2>
+            <p>Tveka inte att höra av dig till vår styrelsen. <br>Dag och natt, kan dem lämpa dig, <strong>speciellt
                     natt</strong>!</p>
             <div class="contact_pictures_wrapper">
                 <div class=contact_pictures>
@@ -92,34 +96,6 @@
                 </div>
             </div>
 
-        </main>
-        <aside id="styrelse_info">
-            <table id="styrelse_table" class="unified_style_table">
-                <tr>
-                    <th colspan=3>Våran styrelsemeddlemmar</th>
-                </tr>
-                <tr>
-                    <th>Namn</th>
-                    <th>Melj</th>
-                    <th>Mobil</th>
-                </tr>
-                <tr>
-                    <th>Erik Ekholm</th>
-                    <th>erik@djupvik.se</th>
-                    <th>070-123 45 67</th>
-                </tr>
-                <tr>
-                    <th>Bo Lautin</th>
-                    <th>bo@djupvil.se</th>
-                    <th>071-234 56 78</th>
-                </tr>
-
-
-                <tr>
-                    <th>Maria Fagerström</th>
-                    <th>maria@djupvik.se</th>
-                    <th>075-678 90 12</th>
-                </tr>
             </table>
         </aside>
 
@@ -145,9 +121,9 @@
     <script>
         tippy.setDefaults({
             arrow: true,
-            arrowType: 'round', // or 'sharp' (default)
+            arrowType: 'round',
             animation: 'fade',
-            theme: 'light-border',
+            theme: 'light',
             interactive: true,
         })
     </script>
@@ -158,6 +134,20 @@
         tippy('#medlem_2', {
             content: '<span style="color: aqua;">Fredrik Bottarve </span><br>fredrik@djupvik.se<br>072-345 67 89<br>',
         })
+        tippy('#medlem_3', {
+            content: '<span style="color: aqua;">Maria Fagerström </span><br>maria@djupvik.se<br>075-678 90 12<br>',
+        })
+        tippy('#medlem_4', {
+            content: '<span style="color: aqua;">Maria Fagerström </span><br>maria@djupvik.se<br>075-678 90 12<br>',
+        })
+        tippy('#medlem_5', {
+            content: '<span style="color: aqua;">Erik Ekholm </span><br>erik@djupvik.se<br>070-123 45 67<br>',
+        })
+        tippy('#medlem_6', {
+            content: '<span style="color: aqua;">Samngyo Bungray </span><br>samngyo@djupvik.se<br>079-646 81 66<br>',
+        })
+
+
 
     </script>
 
