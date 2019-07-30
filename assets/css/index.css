@@ -89,11 +89,11 @@ h1 {
 	padding-left: 1em;
 }
 
-h2 {margin-top: 2vw;
+h2 {margin-top: 4vw;
 	font-size: 165%;}
 
 h3 {
-	margin-top: 2vw;
+	margin-top: 4vw;
 	font-size: 150%;}
 
 h4 {font-size: 125%;;}
@@ -133,15 +133,6 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	text-align: center;
 }
 
-.kontakt_title_wrap{
-	display: flex;
-	justify-content: center;
-}
-
-.kontakt_title_wrap img{
-	width: 80px;
-	height: 80px;
-}
 .kontakt_formular h3 {
 	text-align: center;
 	margin: 1em ;
@@ -282,22 +273,13 @@ Pages grid styling and internal styling
 	font-size: small;
 }
 
-.news_wrapper{
-	display: flex;
-}
-
-.news_wrapper img{
-	width: 80px;
-	height: 80px;
-}
-
 /* ------------------------------guestboats------------------------------- */
 
 .guestboat_container{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(150px, auto);
+	grid-auto-rows: minmax(300px, auto);
 	grid-template-areas: 'guest_a' 'guest_b' 'guest_c';
 }
 
@@ -311,14 +293,9 @@ Pages grid styling and internal styling
 #djupvik_footer{
 	grid-area: guest_c;
 }
-.guest_title_wrapper {
-	display: flex;
-}
 
-.guest_title_wrapper img {
-	width: 80px;
-	height: 80px;
-  }
+
+
 /* ------------------------------turism------------------------------- */
 
 .turism_container {
