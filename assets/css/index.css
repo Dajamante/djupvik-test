@@ -65,7 +65,12 @@ Poppins or Oxygen(?) theme
 	--classic_brown:  rgb(59, 46, 45);
 	--highlights: orangered;
 }
-/*NOT BODY or ugly*/
+
+html,body {
+    width:100%;
+    height:100%;
+}
+/*NOT "body" or ugly problems with margins....*/
 html main, aside {
 font-size: 16px;
 padding: 2em 2em 2em 2em;
@@ -129,7 +134,7 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	text-align: center;
 	margin-bottom: 1em;
 }
-#kontakta_oss_title h3 {
+.kontakt_formular h2 {
 	text-align: center;
 }
 
@@ -183,6 +188,61 @@ input[type="radio"]{
 	align-items: center;
 }
 
+.contact_pictures_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#kontakt_main h2:nth-child(3), p{
+	text-align: center;
+}
+
+/*
+solution
+https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-and-how-to-remove-it
+*/
+.contact_pictures{
+	display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 150px);
+	background-color: var(--classic_brown);
+	grid-gap: 5px;
+	height: fit-content;
+	width: fit-content;
+	margin-top: 20px;
+	padding: 5px;
+}
+
+.contact_pictures img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#medlem_1{
+	grid-row: 1;
+	grid-column: 1;
+}
+#medlem_2{
+	grid-row: 1;
+	grid-column: 2;
+}
+#medlem_3{
+	grid-row: 1;
+	grid-column: 3;
+}
+#medlem_4{
+	grid-row: 2;
+	grid-column: 1;
+}
+#medlem_5{
+	grid-row: 2;
+	grid-column: 2;
+}
+#medlem_6{
+	grid-row: 2;
+	grid-column: 3;
+}
 
 /*------------------------------------------------------------------------------
 Nav menu
