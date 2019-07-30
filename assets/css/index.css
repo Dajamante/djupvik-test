@@ -185,7 +185,7 @@ Pages grid styling.
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: 'start_a' 'start_b' 'start_c';
+	grid-template-areas: "start_a" "start_b" "start_c";
 }
 
 .djupvik_presentation {
@@ -210,7 +210,6 @@ Pages grid styling.
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
-
 	grid-template-areas: 'guest_a' 'guest_b' 'guest_c';
 }
 
@@ -234,7 +233,6 @@ Pages grid styling.
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
 	grid-auto-rows: minmax(300px, auto);
-
 	grid-template-areas: "tur_a" "tur_b";
 }
 #turism_main {
@@ -271,7 +269,7 @@ Pages grid styling.
 #historia_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 80% 20%;
+	grid-template-rows: auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
 	grid-template-areas: "hist_a" "hist_b";
@@ -309,7 +307,7 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 
 #pictures_page_container {
 	grid-template-columns: 1fr;
-	grid-template-rows: 5fr 1fr;
+	grid-template-rows: auto auto;
 	grid-template-areas: "pic_a" "pic_b";}
 
 #pictures_footer {
