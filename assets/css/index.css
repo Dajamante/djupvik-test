@@ -180,21 +180,21 @@ input[type="radio"]{
 Pages grid styling.
 -------------------------------------*/
 /* index */
-#startpage_container{
+.startpage_container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 30% 50% 20fr;
-	grid-template-areas: "start_a" "start_b" "start_c";
+	grid-template-rows: 30% 50% 20%;
+	grid-template-areas: 'start_a' 'start_b' 'start_c';
 }
 
-#djupvik_presentation{
+.djupvik_presentation {
 	grid-area: start_a;
 }
-#news{
+.news {
 	grid-area: start_b;
 }
 
-#djupvik_footer{
+.djupvik_footer {
 	grid-area: start_c;
 }
 
@@ -210,7 +210,7 @@ Pages grid styling.
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "guest_a" "guest_b" "guest_c";
+	grid-template-areas: 'guest_a' 'guest_b' 'guest_c';
 }
 
 #djupvik_presentation{
