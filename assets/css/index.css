@@ -4,7 +4,7 @@
 Oxygen theme
 -------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Indie+Flower:400');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Amita:400|Indie+Flower:400');
 
 html {font-size: 15px;}
 
@@ -173,15 +173,16 @@ input[type="radio"]{
 	color: rgb(51, 51, 51);
 }
 
-
-
 /*-------------------------------------
-Pages grid styling.
+Pages grid styling and internal styling
 -------------------------------------*/
-/* index */
+/* ------------------------------index------------------------------- */
+
 .startpage_container{
 	display: grid;
 	grid-template-columns: 1fr;
+	/*solves overlapping
+	https://stackoverflow.com/questions/52675479/why-are-my-css-grid-items-overlapping-when-arranged-in-a-particular-layout*/
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 	grid-template-areas: "start_a" "start_b" "start_c";
@@ -203,7 +204,8 @@ Pages grid styling.
 	font-size: small;
 }
 
-/* guestboats */
+/* ------------------------------guestboats------------------------------- */
+
 #guestboat_container{
 	display: grid;
 	grid-template-columns: 1fr;
@@ -225,7 +227,7 @@ Pages grid styling.
 
 
 
-/* turism */
+/* ------------------------------turism------------------------------- */
 
 #turism_container {
 	display: grid;
@@ -242,7 +244,7 @@ Pages grid styling.
 }
 
 
-/* kontakt */
+/* ------------------------------kontakt------------------------------- */
 #kontakt_container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -264,7 +266,7 @@ Pages grid styling.
 }
 
 
-/* historia */
+/* ------------------------------historia------------------------------- */
 #historia_container{
 	display: grid;
 	grid-template-columns: 1fr;
@@ -280,7 +282,7 @@ Pages grid styling.
 	grid-area: hist_a;
 	display: grid;
 	grid-template-columns: 1fr;
-	/* solves the overlapping issue!*/
+
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
@@ -294,13 +296,44 @@ Pages grid styling.
 	grid-area: hist_main_b;
 }
 
-#djupvik_historia_main #namnforklaring{
+#namnforklaring{
 	grid-area: hist_main_c;
+
 }
 
+/*
+solution:
+https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awesome-icon*/
 
-/* pictures
-tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
+#namnforklaring ul {
+	font-family: 'Amita', cursive;
+	line-height: 1.5em;
+	list-style: none;
+	padding: 0;
+  }
+#namnforklaring li {
+	padding-left: 1.3em;
+}
+
+#namnforklaring li:before {
+	content: "\f10d"; /* FontAwesome Unicode */
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+  }
+
+  #namnforklaring li:after {
+	content: "\f10e"; /* FontAwesome Unicode */
+
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: 1.3em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+  }
+/* ------------------------------pictures------------------------------- */
+
+/*tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 */
 
 #pictures_page_container {
