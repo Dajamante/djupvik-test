@@ -59,13 +59,13 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	text-align: center;
 	margin: 0 auto;
 	border-style: solid;
+	padding-bottom: 1em;
 	margin-bottom: 2em;
 }
 
 
 #kontakta_oss_title {
 	text-align: center;
-	size: 2em;
 	margin-bottom: 1em;
 }
 
@@ -87,7 +87,7 @@ input[type="radio"]{
 	max-width: 30px;
 }
 
-.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"],textarea {
+.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"], textarea {
 	max-width: 200px;
 	margin: 0 0 2em;
 	border: 1px solid #ccc;
@@ -100,7 +100,6 @@ input[type="radio"]{
 
 .hover_button{
 	max-width: 80px;
-	position: center;
 	background-color: rgb(34, 7, 3);
 	color: beige;
 	border-radius: 20px;
@@ -111,8 +110,8 @@ input[type="radio"]{
 	background-color: orangered;
 }
 
-textarea:focus {
-	background: rgba((255,69,0.0.7));
+.kontakt_formular textarea:focus {
+	background: rgba((255,69,0, 0.7));
 }
 
 .kontakt_formular .radio_buttons{
@@ -189,14 +188,14 @@ Pages grid styling.
 }
 
 #djupvik_presentation{
-	grid-area: "start_a";
+	grid-area: start_a;
 }
 #news{
-	grid-area: "start_b";
+	grid-area: start_b;
 }
 
 #djupvik_footer{
-	grid-area: "start_c";
+	grid-area: start_c;
 }
 
 .date{
@@ -215,14 +214,14 @@ Pages grid styling.
 }
 
 #djupvik_presentation{
-	grid-area: "guest_a";
+	grid-area: guest_a;
 }
 #news{
-	grid-area: "guest_b";
+	grid-area: guest_b;
 }
 
 #djupvik_footer{
-	grid-area: "guest_c";
+	grid-area: guest_c;
 }
 
 
@@ -238,10 +237,10 @@ Pages grid styling.
 	grid-template-areas: "tur_a" "tur_b";
 }
 #turism_main {
-	grid-area: "tur_a";
+	grid-area: tur_a;
 }
 #turism_footer {
-	grid-area: "tur_b";
+	grid-area: tur_b;
 }
 
 
@@ -256,14 +255,14 @@ Pages grid styling.
 }
 
 #kontakt_main {
-	grid-area: "kontakt_a";
+	grid-area: kontakt_a;
 }
 
 #styrelse_info{
-	grid-area: "kontakt_b";
+	grid-area: kontakt_b;
 }
 #kontakt_footer {
-	grid-area: "kontakt_c";
+	grid-area: kontakt_c;
 }
 
 
@@ -278,7 +277,7 @@ Pages grid styling.
 }
 
 #historia_footer {
-	grid-area: "hist_b";
+	grid-area: hist_b;
 }
 #djupvik_historia_main{
 	grid-area: "hist_a";
@@ -291,15 +290,15 @@ Pages grid styling.
 	grid-template-areas: "hist_main_a" "hist_main_b" "hist_main_c";
 }
 #djupvik_historia_main #summary_historia {
-	grid-area: "hist_main_a";
+	grid-area: hist_main_a;
 }
 
 #djupvik_historia_main #tempest{
-	grid-area: "hist_main_b";
+	grid-area: hist_main_b;
 }
 
 #djupvik_historia_main #namnforklaring{
-	grid-area: "hist_main_c"
+	grid-area: hist_main_c;
 }
 
 
@@ -313,12 +312,12 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 	grid-template-areas: "pic_a" "pic_b";}
 
 #pictures_footer {
-	  grid-area: "pic_b";
+	  grid-area: pic_b;
 }
 
 #pictures_main {
 	display: grid;
-	grid-area: "pic_a";
+	grid-area: pic_a;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(5, 200px);
 	grid-gap: 3px;
@@ -351,7 +350,7 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(auto, 100px);
+	grid-template-rows: repeat(100px, auto);
 
 	}
 	#pictures_main .vertical {
