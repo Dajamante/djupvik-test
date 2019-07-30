@@ -65,7 +65,7 @@ Poppins or Oxygen(?) theme
 	--classic_brown:  rgb(59, 46, 45);
 	--highlights: orangered;
 }
-/*NOT BODY or ugly margins!*/
+/*NOT BODY or ugly*/
 html main, aside{
 font-size: 16px;
 padding: 2em 2em 2em 2em;
@@ -79,7 +79,7 @@ padding: 2em 2em 2em 2em;
 
 h1 {
 	font-family: "Indie Flower", sans-serif;
-	font-size: 400%;
+	font-size: 300%;
 	margin-bottom: 4vw;
 }
 
@@ -177,6 +177,8 @@ Gotland uses Tangerine color and Gotland.se uses brown colors
 	color:var(--classic_brown);
 	text-align: center;
 	margin: 0 auto;
+	/*don't want it to eat the menu*/
+	margin-top: 20px;
 	width: 100%;
 	transition: color 0.3s ease;
 }
@@ -356,11 +358,16 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 
 #namnforklaring {
 	list-style: none;
+
 }
 
 .namnforklaring_list_item{
 	font-family: 'Indie flower', cursive;
 	font-size: 1.2em;
+	/*between the elements*/
+	margin: 0.5em;
+	/*margin left*/
+	margin-left: 3em;
 	font-stretch: extra-expanded;
 }
 
@@ -465,7 +472,7 @@ unified footer
 ---------------------------*/
 
 .footer{
-	margin-top: 4em;
+	margin-top: 2em;
 	margin-right: 0;
 	margin-left: 0;
 	padding-top: 1em;
