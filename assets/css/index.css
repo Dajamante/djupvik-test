@@ -185,18 +185,23 @@ Pages grid styling.
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 30% 50% 20fr;
-	grid-template-areas: "djupvik_presentation" "djupvik_news" "footer";
+	grid-template-areas: "start_a" "start_b" "start_c";
 }
 
 #djupvik_presentation{
-	grid-area: "djupvik_presentation";
+	grid-area: "start_a";
 }
 #news{
-	grid-area: "djupvik_news";
+	grid-area: "start_b";
 }
 
 #djupvik_footer{
-	grid-area: "footer";
+	grid-area: "start_c";
+}
+
+.date{
+	font-style: italic;
+	font-size: small;
 }
 
 /* guestboats */
@@ -206,18 +211,18 @@ Pages grid styling.
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "guestboat_text" "guestboat_table" "footer";
+	grid-template-areas: "guest_a" "guest_b" "guest_c";
 }
 
 #djupvik_presentation{
-	grid-area: "guestboat_text";
+	grid-area: "guest_a";
 }
 #news{
-	grid-area: "guestboat_table";
+	grid-area: "guest_b";
 }
 
 #djupvik_footer{
-	grid-area: "footer";
+	grid-area: "guest_c";
 }
 
 
@@ -230,13 +235,13 @@ Pages grid styling.
 	grid-template-rows: auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "main" "footer";
+	grid-template-areas: "tur_a" "tur_b";
 }
 #turism_main {
-	grid-area: "main";
+	grid-area: "tur_a";
 }
 #turism_footer {
-	grid-area: "footer";
+	grid-area: "tur_b";
 }
 
 
@@ -247,18 +252,18 @@ Pages grid styling.
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "form" "styrelse" "footer";
+	grid-template-areas: "kontakt_a" "kontakt_b" "kontakt_c";
 }
 
 #kontakt_main {
-	grid-area: "form";
+	grid-area: "kontakt_a";
 }
 
 #styrelse_info{
-	grid-area: "styrelse";
+	grid-area: "kontakt_b";
 }
 #kontakt_footer {
-	grid-area: "footer";
+	grid-area: "kontakt_c";
 }
 
 
@@ -269,32 +274,32 @@ Pages grid styling.
 	grid-template-rows: 80% 20%;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "hist" "footer";
+	grid-template-areas: "hist_a" "hist_b";
 }
 
 #historia_footer {
-	grid-area: "footer";
+	grid-area: "hist_b";
 }
 #djupvik_historia_main{
-	grid-area: "hist";
+	grid-area: "hist_a";
 	display: grid;
 	grid-template-columns: 1fr;
 	/* solves the overlapping issue!*/
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
 
-	grid-template-areas: "general" "tempest" "namnforklaring";
+	grid-template-areas: "hist_main_a" "hist_main_b" "hist_main_c";
 }
 #djupvik_historia_main #summary_historia {
-	grid-area: "general";
+	grid-area: "hist_main_a";
 }
 
 #djupvik_historia_main #tempest{
-	grid-area: "tempest";
+	grid-area: "hist_main_b";
 }
 
 #djupvik_historia_main #namnforklaring{
-	grid-area: "namnforklaring"
+	grid-area: "hist_main_c"
 }
 
 
@@ -305,15 +310,15 @@ tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 #pictures_page_container {
 	grid-template-columns: 1fr;
 	grid-template-rows: 5fr 1fr;
-	grid-template-areas: "pic_main" "footer";}
+	grid-template-areas: "pic_a" "pic_b";}
 
 #pictures_footer {
-	  grid-area: "footer";
+	  grid-area: "pic_b";
 }
 
 #pictures_main {
 	display: grid;
-	grid-area: "pic_main";
+	grid-area: "pic_a";
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(5, 200px);
 	grid-gap: 3px;
