@@ -8,18 +8,15 @@ Oxygen theme
 
 html {font-size: 14px;}
 
-body {
+* main, aside, body {
 	background-color: white;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	line-height: 1.45;
-	color: #333;
+	color: rgb(2, 0, 0);
 	margin-left: 1em;
 	margin-right: 1em;
 
-}
-main, p, body, aside{
-	margin-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -97,7 +94,7 @@ input[type="radio"]{
 	outline: none;
 }
 
-textarea {
+.kontakt_formular textarea {
 	height: 10em;
 }
 
@@ -131,8 +128,7 @@ textarea:focus {
 	width:100%;
 }
 
-/*Gotland uses Tangerine color */
-/* Gotland.se uses brown colors */
+/*Gotland uses Tangerine color and Gotland.se uses brown colors */
 .fa-water {
 	font-size: 150%;
 	color:rgb(59, 46, 45);
@@ -143,6 +139,7 @@ textarea:focus {
 .fa-water:hover{
 	color: orangered;
 }
+
 .navigation_menu ul {
 	font-family: 'Indie Flower', cursive;
 	list-style:none;
@@ -177,8 +174,6 @@ textarea:focus {
 	text-decoration:none;
 	color: rgb(51, 51, 51);
 }
-
-
 
 
 
