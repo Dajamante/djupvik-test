@@ -69,9 +69,8 @@ Poppins or Oxygen(?) theme
 html main, aside {
 font-size: 16px;
 padding: 2em 2em 2em 2em;
-width: 90vw;
+
 }
-.kontakt_container,
 
 * html h1, h2, h3, h4, h5, body {
   text-align: left;
@@ -86,7 +85,7 @@ h1 {
 }
 
 /*this one is not in a main section*/
-#pictures_page_container h1 {
+.pictures_page_container h1 {
 	padding-left: 1em;
 }
 
@@ -123,14 +122,19 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	border-style: solid;
 	padding-bottom: 1em;
 	margin-bottom: 2em;
+	border: solid;
 }
 
 #kontakta_oss_title {
 	text-align: center;
 	margin-bottom: 1em;
 }
+#kontakta_oss_title h3 {
+	text-align: center;
+}
 
 .kontakt_formular h3 {
+	text-align: center;
 	margin: 1em ;
 	color:  var(--classic_brown);
 	font-size: 1.5em;
@@ -271,7 +275,7 @@ Pages grid styling and internal styling
 
 /* ------------------------------guestboats------------------------------- */
 
-#guestboat_container{
+.guestboat_container{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
@@ -294,7 +298,7 @@ Pages grid styling and internal styling
 
 /* ------------------------------turism------------------------------- */
 
-#turism_container {
+.turism_container {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
@@ -310,7 +314,7 @@ Pages grid styling and internal styling
 
 
 /* ------------------------------kontakt------------------------------- */
-#kontakt_container {
+.kontakt_container {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
@@ -330,7 +334,7 @@ Pages grid styling and internal styling
 }
 
 /* ------------------------------historia------------------------------- */
-#historia_container{
+.historia_container{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
@@ -375,7 +379,7 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 
 .namnforklaring_list_item{
 	font-family: 'Indie flower', cursive;
-	font-size: 1.15em;
+	font-size: 1.25em;
 	/*margin left*/
 	margin-left: 3em;
 	font-stretch: extra-expanded;
@@ -402,7 +406,7 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 /*tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
 */
 
-#pictures_page_container {
+.pictures_page_container {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
 	grid-template-areas: "pic_a" "pic_b";}
