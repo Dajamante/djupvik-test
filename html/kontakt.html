@@ -23,10 +23,10 @@
     <header>
         <nav class=navigation_menu id=nav_menu>
             <ul>
-                <li class=navigation_link><a href="../index.html">Startsidan</a></li class=navigation_link>
-                <li class=navigation_link><a href="../html/guestboat.html">Gästbåtar</a></li class=navigation_link>
-                <li class=navigation_link><a href="../html/pictures.html">Bilder</a></li class=navigation_link>
-                <li class=navigation_link><a href="../html/historia.html">Historia</a></li class=navigation_link>
+                <li class=navigation_link><a href="../index.html">Startsidan</a></li>
+                <li class=navigation_link><a href="../html/guestboat.html">Gästbåtar</a></li>
+                <li class=navigation_link><a href="../html/pictures.html">Bilder</a></li>
+                <li class=navigation_link><a href="../html/historia.html">Historia</a></li>
                 <li class=navigation_link><a href="../html/turism.html">Turism</a></li>
             </ul>
         </nav>
@@ -45,7 +45,7 @@
                     Select2 guide that works:
                     https://itsolutionstuff.com/post/jquery-select2-select-box-with-search-example-codeexample.html
                 -->
-                <select class="my_select2" name="select_option" style="width: 30%" ;>
+                <select class="my_select2" name="select_option" style="width: 30%">
                     <option value="medlemskap">Medlemskap</option>
                     <option value="boatplace">Båtplats</option>
                     <option value="ovrigt">Övrigt</option>
@@ -67,11 +67,13 @@
 
                 <h3>Hur kan vi kontakta dig?</h3>
                 <div class="radio_buttons">
-                    <input type="radio" name="contact_choice" value="contact_by_tel" checked> Telefon</input>
-                    <input type="radio" name="contact_choice" value="contact_by_mail"> Mail</input>
-                    <input type="radio" name="contact_choice" value="no_contact"> Inte alls</input>
+                    <input type="radio" id="tel_radio_id" name="contact_choice" value="contact_by_tel" checked>
+                    <label for="tel_radio_id">Telephone</label>
+                    <input type="radio" id="mail_radio_id" name="contact_choice" value="contact_by_mail">
+                    <label for="mail_radio_id">Mail</label>
+                    <input type="radio" id="no_contact_radio_id" name="contact_choice" value="no_contact">
+                    <label for="mail_radio_id">Inte alls</label>
                 </div>
-                <h3>
             </form>
         </main>
         <aside id="styrelse_info">
@@ -115,13 +117,13 @@
             <p>Hamnfogde Bo Lautin</p>
             <p><i class="fa fa-mobile-alt"></i>
                 0707-920310</p>
-            <p><i class="fa fa-home"></i></i>Djupviks hamnförening</br>
-                c/o Ekholm</br>
-                Eksta Hägur 170</br>
+            <p><i class="fa fa-home"></i>Djupviks hamnförening<br>
+                c/o Ekholm<br>
+                Eksta Hägur 170<br>
                 623 54 Klintehamn</p>
         </footer>
     </div>
-    <script type="text/javascript">
+    <script>
         $(".my_select2").select2({
             placeholder: {
                 id: '', // the value of the option
