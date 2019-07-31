@@ -81,8 +81,10 @@ padding: 2em 2em 2em 2em;
 
 h1 {
 	font-family: "Indie Flower", sans-serif;
+	font-weight: bold;
 	font-size: 300%;
-	margin-bottom: 4vw;
+	margin-bottom: 2vw;
+	color: var(--classic_brown);
 }
 
 /*this one is not in a main section*/
@@ -90,14 +92,17 @@ h1 {
 	padding-left: 1em;
 }
 
-h2 {margin-top: 2vw;
+h2 {
+	font-family: "Indie Flower", sans-serif;
+	font-weight: bold;
+	color: var(--classic_brown);
 	font-size: 165%;}
 
 h3 {
-	margin-top: 2vw;
-	font-size: 150%;}
+	color: var(--classic_brown);
+	font-size: 160%;}
 
-h4 {font-size: 125%;;}
+h4 {font-size: 120%;;}
 
 h5 {font-size: 115%;}
 
@@ -311,7 +316,7 @@ Pages grid styling and internal styling
 	/*solves overlapping
 	https://stackoverflow.com/questions/52675479/why-are-my-css-grid-items-overlapping-when-arranged-in-a-particular-layout*/
 	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(300px, auto);
+	grid-auto-rows: minmax(200px, auto);
 	grid-template-areas: "start_a" "start_b" "start_c";
 }
 
@@ -329,6 +334,11 @@ Pages grid styling and internal styling
 .date{
 	font-style: italic;
 	font-size: small;
+	margin-bottom:1em;
+}
+
+.startpage_container p{
+	margin-bottom:1em;
 }
 
 /* ------------------------------guestboats------------------------------- */
