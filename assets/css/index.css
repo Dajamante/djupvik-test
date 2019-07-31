@@ -117,7 +117,7 @@ I followd this example:
 https://codepen.io/CrocoDillon/pen/GJclb
 -------------------------------------*/
 .kontakt_formular {
-	max-width: 600px;
+	max-width: 100%;
 	text-align: center;
 	margin: 0 auto;
 	border-style: solid;
@@ -202,8 +202,8 @@ https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-
 */
 .contact_pictures{
 	display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
 	background-color: var(--classic_brown);
 	grid-gap: 5px;
 	height: fit-content;
@@ -222,24 +222,24 @@ https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-
 	grid-column: 1;
 }
 #medlem_2{
-	grid-row: 1;
-	grid-column: 2;
-}
-#medlem_3{
-	grid-row: 1;
-	grid-column: 3;
-}
-#medlem_4{
 	grid-row: 2;
 	grid-column: 1;
+}
+#medlem_3{
+	grid-row: 3;
+	grid-column: 1;
+}
+#medlem_4{
+	grid-row: 1;
+	grid-column: 2;
 }
 #medlem_5{
 	grid-row: 2;
 	grid-column: 2;
 }
 #medlem_6{
-	grid-row: 2;
-	grid-column: 3;
+	grid-row: 3;
+	grid-column: 2;
 }
 
 /*------------------------------------------------------------------------------
@@ -575,22 +575,25 @@ https://stackoverflow.com/questions/18737037/how-do-i-align-items-in-a-td*/
 		border-bottom: 1px solid #eee;
 		position: relative;
 		padding-left: 50%;
+
 	}
 
 	td:before {
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		left: 30px;
-		width: 40%;
-		white-space: nowrap;
+		vertical-align: middle;
+		left: 20px;
+		width: 45%;
+		padding-right: 10px;
+
 	}
 
-	td:nth-of-type(1):before { vertical-align: middle; content: "Dag"; }
-	td:nth-of-type(2):before { vertical-align: middle; content: "Tid"; }
-	td:nth-of-type(3):before {vertical-align: middle; content: "°C"; }
-	td:nth-of-type(4):before {  vertical-align: middle;content: "Vind"; }
-	td:nth-of-type(5):before { vertical-align: middle; content: "Vädret"; }
+	td:nth-of-type(1):before { content: "Dag : "; text-align: left;padding-left: 20px;}
+	td:nth-of-type(2):before { content: "Tid : "; text-align: left;padding-left: 20px;}
+	td:nth-of-type(3):before { content: "°C : "; text-align: left;padding-left: 20px;}
+	td:nth-of-type(4):before { content: "Vind : "; text-align: left;padding-left: 20px;}
+	td:nth-of-type(5):before { content: "Vädret : "; text-align: left;padding-left: 20px;}
 
 }
 /*--------------------------
