@@ -63,19 +63,20 @@ Poppins or Oxygen(?) theme
 :root {
 	--classic_brown:  rgb(59, 46, 45);
 	--highlights: orangered;
+	--warm-brown:  rgb(34, 7, 3);
 }
 
 /*NOT "body" or ugly problems with margins....*/
 html main, aside {
 font-size: 16px;
-padding: 2em 2em 2em 2em;
+margin: 2em 2em 2em 2em;
 
 }
 
 * html h1, h2, h3, h4, h5, body {
   text-align: left;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 
@@ -93,8 +94,8 @@ h1 {
 }
 
 h2 {
-	font-family: "Indie Flower", sans-serif;
-	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	font-stretch: extra-expanded;
 	color: var(--classic_brown);
 	font-size: 165%;}
 
@@ -113,11 +114,62 @@ html body{
 small, .text_small {font-size: 0.707em;}
 
 figure{
-	padding-top: 20px;
-	padding-bottom: 20px;
+	align-self: center;
+	text-align: center;
+	font-size: smaller;
+  	text-indent: 0;
+}
+figure > img{
+	width: 50vw;
 }
 
-/*-------------------------------------
+@media (min-width: 800px) {
+    figure > img{
+		width: 40vw;
+	}
+}
+
+
+.footer{
+	margin-top: 2em;
+	padding-bottom: 2em;
+	margin-right: 0;
+	margin-left: 0;
+	padding-top: 1em;
+	background: var(--classic_brown);
+	font-size: 110%;
+	color: beige;
+	align-content: center;
+	text-align: center;
+}
+.fa-home, .fa-mobile-alt{
+	padding-right: 10px;
+	font-size: 120%;
+}
+
+a:link {
+	text-decoration: none;
+	font-size: 1.4em;
+	color: rgb(13, 138, 201);
+	font-stretch: extra-expanded;
+	font-family: "Indie Flower", "cursive";
+  }
+
+a:visited {
+	color: rgb(5, 89, 131);
+	font-style: italic;
+}
+
+a:hover {
+	color: var(--highlights);
+}
+
+a:active {
+	color: var(--highlights);
+}
+
+
+/*-------------------------- Kontakt page ----------------------------------*
 I followd this example:
 https://codepen.io/CrocoDillon/pen/GJclb
 -------------------------------------*/
@@ -129,17 +181,26 @@ https://codepen.io/CrocoDillon/pen/GJclb
 	padding-bottom: 1em;
 	margin-bottom: 2em;
 	border: solid;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
+/* 600 looks best than 800px*/
+@media (min-width: 600px){
+.kontakt_formular {
+	margin-left: 20%;
+	margin-right: 20%;
+	}
+}
 #kontakta_oss_title {
 	text-align: center;
 	margin-bottom: 1em;
 }
-.kontakt_formular h2 {
+.kontakt_formular > h2 {
 	text-align: center;
 }
 
-.kontakt_formular h3 {
+.kontakt_formular > h3 {
 	text-align: center;
 	margin: 1em ;
 	color:  var(--classic_brown);
@@ -166,7 +227,7 @@ input[type="radio"]{
 
 .hover_button{
 	max-width: 80px;
-	background-color: rgb(34, 7, 3);
+	background-color: var(--warm-brown);
 	color: beige;
 	border-radius: 20px;
 	transition: background-color 0.3s ease;
@@ -195,10 +256,10 @@ input[type="radio"]{
 	justify-content: center;
 }
 
-#styrelse_info h2:nth-child(1){
+#styrelse_info > h2:nth-child(1){
 	text-align: center;
 }
-#styrelse_info p{
+#styrelse_info > p{
 	text-align: center;
 }
 /*
@@ -216,7 +277,6 @@ https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-
 	margin-top: 20px;
 	padding: 5px;
 }
-
 .contact_pictures img {
     width: 100%;
     height: 100%;
@@ -247,6 +307,43 @@ https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-
 	grid-column: 2;
 }
 
+@media (min-width: 800px){
+	.contact_pictures {
+		display: grid;
+    	grid-template-columns: repeat(2, 260px);
+    	grid-template-rows: repeat(3, 260px);
+	}
+	.contact_pictures img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	#medlem_1{
+		grid-row: 1;
+		grid-column: 1;
+	}
+	#medlem_2{
+		grid-row: 2;
+		grid-column: 1;
+	}
+	#medlem_3{
+		grid-row: 3;
+		grid-column: 1;
+	}
+	#medlem_4{
+		grid-row: 1;
+		grid-column: 2;
+	}
+	#medlem_5{
+		grid-row: 2;
+		grid-column: 2;
+	}
+	#medlem_6{
+		grid-row: 3;
+		grid-column: 2;
+	}
+}
+
 /*------------------------------------------------------------------------------
 Nav menu
 Gotland uses Tangerine color and Gotland.se uses brown colors
@@ -275,7 +372,6 @@ Gotland uses Tangerine color and Gotland.se uses brown colors
 	width: 100%;
 	list-style:none;
 	text-align:center;
-	font-size:1.5em;
 	letter-spacing: 3px;
 	background-color: rgba(59, 46, 45, 0.1);
 	margin: 0;
@@ -283,6 +379,7 @@ Gotland uses Tangerine color and Gotland.se uses brown colors
 	display:none;
 	width:100%;
 }
+
 
 .navigation_menu a {
 	font-family: 'Indie Flower', cursive;
@@ -341,6 +438,7 @@ Pages grid styling and internal styling
 	margin-bottom:1em;
 }
 
+
 /* ------------------------------guestboats------------------------------- */
 
 .guestboat_container{
@@ -351,20 +449,115 @@ Pages grid styling and internal styling
 	grid-template-areas: 'guest_a' 'guest_b' 'guest_c';
 }
 
-#djupvik_presentation{
+#guestboat_text {
 	grid-area: guest_a;
 }
-#news{
+#guestboat_table {
 	grid-area: guest_b;
 }
 
-#djupvik_footer{
+#guestboat_footer {
 	grid-area: guest_c;
 }
-
-.guestboat_container h2{
-	text-align: center;
+#guestboat_text > ul{
+	list-style-type: circle;
+	padding: 1em;
+	padding-right: 2em;
 }
+
+#guestboat_text > .apparte{
+	font-size: x-small;
+}
+
+@media (min-width: 1000px) {
+    #guestboat_text, #guestboat_table{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	#table_of_temperatures{
+		margin: 0 auto;
+	}
+}
+
+
+/*--------------------------
+unified table (called unified table in case I would need more tables)
+(before the styrelse was also in a table)
+---------------------------*/
+.unified_style_table {
+	border-collapse: separate;
+	border: solid;
+	border-style: ridge;
+	width:80vw;
+	max-width: 550px;
+	white-space:nowrap;
+	padding: 5px 5px 5px 5px;
+	vertical-align: middle;
+    text-align: center;
+}
+
+/*solution for well centered data cells.
+https://stackoverflow.com/questions/18737037/how-do-i-align-items-in-a-td*/
+.unified_style_table td a, td input, td img {
+    vertical-align: middle;
+    display: inline-block;
+}
+.unified_style_table td {
+	font-size: small;
+}
+
+.unified_style_table tr:nth-child(even) {background-color:  rgba(34, 7, 3, 0.1); }
+
+/* efter mycket testning: bäst är https://css-tricks.com/responsive-data-tables/
+*/
+@media only screen and (max-width: 600px) {
+
+/* Force table to not be like tables anymore */
+.unified_style_table th, td, tr {
+	display: block;
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+th {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+tr { border: 2px solid #ccc; }
+
+td {
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	padding-left: 50%;
+
+}
+
+td:before {
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	vertical-align: middle;
+	left: 20px;
+	width: 45%;
+	padding-right: 10px;
+
+}
+
+td:nth-of-type(1):before { content: "Dag : "; text-align: left;padding-left: 20px;}
+td:nth-of-type(2):before { content: "Tid : "; text-align: left;padding-left: 20px;}
+td:nth-of-type(3):before { content: "°C : "; text-align: left;padding-left: 20px;}
+td:nth-of-type(4):before { content: "Vind : "; text-align: left;padding-left: 20px;}
+td:nth-of-type(5):before { content: "Vädret : "; text-align: left;padding-left: 20px;}
+
+}
+/*--------------------------
+end unified table
+---------------------------*/
+
+
 
 /* ------------------------------turism------------------------------- */
 
@@ -382,6 +575,12 @@ Pages grid styling and internal styling
 	grid-area: tur_b;
 }
 
+@media (min-width: 1000px){
+	#turism_main{
+		margin-left:10%;
+		margin-right: 10%;
+	}
+}
 
 /* ------------------------------kontakt------------------------------- */
 .kontakt_container {
@@ -403,6 +602,25 @@ Pages grid styling and internal styling
 	grid-area: kontakt_c;
 }
 
+
+/* overriding blue select2 defalut options*/
+.select2-results__option {
+	color: var(--classic_brown);
+	background-color: beige;
+  }
+
+.select2-results__option--highlighted {
+	color: beige !important;
+	background-color:rgb(59, 46, 45) !important;
+}
+
+.read_more {display: none;}
+
+.read_more_toggle {
+	text-align: center;
+}
+
+
 /* ------------------------------historia------------------------------- */
 .historia_container{
 	display: grid;
@@ -419,12 +637,11 @@ Pages grid styling and internal styling
 	grid-area: hist_a;
 	display: grid;
 	grid-template-columns: 1fr;
-
 	grid-template-rows: auto auto auto;
 	grid-auto-rows: minmax(300px, auto);
-
 	grid-template-areas: "hist_main_a" "hist_main_b" "hist_main_c";
 }
+
 #djupvik_historia_main #summary_historia {
 	grid-area: hist_main_a;
 }
@@ -435,7 +652,14 @@ Pages grid styling and internal styling
 
 #namnforklaring{
 	grid-area: hist_main_c;
+}
 
+.historia_container h1, h2, p, button {
+	margin-bottom: 1em;
+}
+/* it uses class hover button but the padding must be bigger*/
+#myBtn{
+	padding: 1em;
 }
 
 /*
@@ -514,6 +738,8 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
     grid-row: span 2;
 }
 
+/* This is the first I did, so I did a media query for mobiles instead of
+larger screens like for the other pages!*/
 @media (max-width:500px) {
 	#pictures_main {
 	display: grid;
@@ -530,139 +756,3 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 		grid-row: span 1;
 	}
   }
-
-/*--------------------------
-unified table (called unified table in case I would need more tables)
-(before the styrelse was also in a table)
----------------------------*/
-.unified_style_table {
-	margin-left:auto;
-    margin-right:auto;
-	border-collapse: separate;
-	border: solid;
-	border-style: ridge;
-	width:80vw;
-	white-space:nowrap;
-	padding: 5px 5px 5px 5px;
-	vertical-align: middle;
-    text-align: center;
-}
-
-/*solution :
-https://stackoverflow.com/questions/18737037/how-do-i-align-items-in-a-td*/
-.unified_style_table td a, td input, td img {
-    vertical-align: middle;
-    display: inline-block;
-}
-.unified_style_table td {
-	font-size: small;
-}
-
-
-.unified_style_table tr:nth-child(even) {background-color:  rgba(34, 7, 3, 0.1); }
-
-/* efter mycket testning: bäst är https://css-tricks.com/responsive-data-tables/
-*/
-@media only screen and (max-width: 600px) {
-
-	/* Force table to not be like tables anymore */
-	.unified_style_table th, td, tr {
-		display: block;
-	}
-
-	/* Hide table headers (but not display: none;, for accessibility) */
-	th {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-
-	tr { border: 2px solid #ccc; }
-
-	td {
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee;
-		position: relative;
-		padding-left: 50%;
-
-	}
-
-	td:before {
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		vertical-align: middle;
-		left: 20px;
-		width: 45%;
-		padding-right: 10px;
-
-	}
-
-	td:nth-of-type(1):before { content: "Dag : "; text-align: left;padding-left: 20px;}
-	td:nth-of-type(2):before { content: "Tid : "; text-align: left;padding-left: 20px;}
-	td:nth-of-type(3):before { content: "°C : "; text-align: left;padding-left: 20px;}
-	td:nth-of-type(4):before { content: "Vind : "; text-align: left;padding-left: 20px;}
-	td:nth-of-type(5):before { content: "Vädret : "; text-align: left;padding-left: 20px;}
-
-}
-/*--------------------------
-end unified table
----------------------------*/
-
-
-
-
-/*--------------------------
-unified footer
----------------------------*/
-
-.footer{
-	margin-top: 2em;
-	padding-bottom: 2em;
-	margin-right: 0;
-	margin-left: 0;
-	padding-top: 1em;
-	background: var(--classic_brown);
-	font-size: 110%;
-	color: beige;
-	align-content: center;
-	text-align: center;
-}
-.fa-home, .fa-mobile-alt{
-	padding-right: 10px;
-	font-size: 120%;
-}
-/*--------------------------
-end unified footer
----------------------------*/
-
-figure#hamnen_dag_photo {
-	align-self: center;
-	text-align: center;
-}
-figure#hamnen_dag_photo > img{
-	width: 20vw;
-	border: solid;
-}
-
-/* overriding blue select2*/
-.select2-results__option {
-	color: var(--classic_brown);
-	background-color: beige;
-  }
-
-.select2-results__option--highlighted {
-	color: beige !important;
-	background-color:rgb(59, 46, 45) !important;
-}
-
-.read_more {display: none;}
-
-.read_more_toggle, .konrad_wrapper {
-	text-align: center;
-}
-/* it uses class hover button but the padding must be bigger*/
-#myBtn{
-	padding: 1em;
-}
