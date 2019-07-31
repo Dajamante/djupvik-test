@@ -80,7 +80,7 @@ function createTable(relevant_times){
 }
 
 function appendTemperatures(relevant_times){
-    console.dir(relevant_times)
+    //console.dir(relevant_times)
     var options = { month: 'short', day: 'numeric', weekday: 'short'};
     for (let i = 0; i < 3; i++) {
         let formated_date = new Date(relevant_times[i].validTime).toLocaleDateString("sv-SV", options);
@@ -103,6 +103,8 @@ function appendOrientedArrow(relevant_times){
         let arrow = new Image(20, 20);
         let windSpeed = document.createElement('div')
         arrow.src = '../assets/images/small/arrow.jpg';
+        arrow.setAttribute("id", `arrow${i}`);
+        console.dir(arrow.id);
         let wd_index = getCorrectIndex(relevant_times[i].parameters, "wd");
         let arrowDegrees = (relevant_times[i].parameters[wd_index].values)
 
@@ -112,19 +114,18 @@ function appendOrientedArrow(relevant_times){
 
         windSpeed.innerHTML = "("+relevant_times[i].parameters[windSpeedIndex].values+")"
 
-        TABLE_TEMPERATURES.rows[i+1].cells[3].appendChild(arrow)
-        TABLE_TEMPERATURES.rows[i+1].cells[3].appendChild(windSpeed)
+        TABLE_TEMPERATURES.rows[i+1].cells[3].appendChild(arrow);
+        let positioned_arrow = document.getElementById(`arrow${i}`);
+        console.dir(positioned_arrow);
+        positioned_arrow.insertAdjacentHTML('afterend', windSpeed.innerHTML);
       }
       return relevant_times
 }
 function appendWeatherSymbol(relevant_times){
     for (let i = 0; i < 3; i++) {
-      console.dir(relevant_times)
       let image_weather = new Image(60, 45)
       let image_index = getCorrectIndex(relevant_times[i].parameters, "Wsymb2")
-      console.dir(image_index)
       let image_weather_values = relevant_times[i].parameters[image_index].values[0];
-      console.dir(image_weather_values)
       image_weather.src = `../assets/images/small/weather_icons_2/${image_weather_values}.png`
 
       TABLE_TEMPERATURES.rows[i+1].cells[4].appendChild(image_weather)

@@ -8,6 +8,8 @@ reset
    License: none (public domain)
 */
 
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -522,17 +524,21 @@ unified table
 ---------------------------*/
 .unified_style_table {
 	margin:auto;
-	margin-top: 2em;
 	border-collapse: separate;
-	max-width: 500px;
-	width: 100%;
 	border: solid;
 	border-style: ridge;
+	max-width:100vw;
+
+	white-space:nowrap;
 }
 
-.unified_style_table th, td {
-text-align: center;
-padding: 8px;
+.unified_style_table th, tr {
+	margin:0px;
+	padding:0px;
+	font-size: small;
+}
+.unified_style_table td{
+	text-align: center;
 }
 .unified_style_table tr:nth-child(even) {background-color:  rgba(34, 7, 3, 0.1); }
 
