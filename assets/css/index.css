@@ -68,8 +68,8 @@ Poppins or Oxygen(?) theme
 
 /*NOT "body" or ugly problems with margins....*/
 html main, aside {
-font-size: 16px;
-margin: 2em 2em 2em 2em;
+	font-size: 16px;
+	margin: 2em 2em 2em 2em;
 
 }
 
@@ -117,9 +117,10 @@ figure{
 	align-self: center;
 	text-align: center;
 	font-size: smaller;
-  	text-indent: 0;
+	  text-indent: 0;
+	  margin-bottom: 1em;
 }
-figure > img{
+figure > img {
 	width: 50vw;
 }
 
