@@ -126,7 +126,7 @@ figure > img {
 
 @media (min-width: 800px) {
     figure > img{
-		width: 40vw;
+		width: 35vw;
 	}
 }
 
@@ -189,8 +189,8 @@ https://codepen.io/CrocoDillon/pen/GJclb
 /* 600 looks best than 800px*/
 @media (min-width: 600px){
 .kontakt_formular {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
 	}
 }
 #kontakta_oss_title {
@@ -439,6 +439,12 @@ Pages grid styling and internal styling
 	margin-bottom:1em;
 }
 
+@media (min-width: 1000px){
+	.djupvik_presentation, .news{
+		margin-left:15%;
+		margin-right: 15%;
+	}
+}
 
 /* ------------------------------guestboats------------------------------- */
 
@@ -472,8 +478,8 @@ Pages grid styling and internal styling
 
 @media (min-width: 1000px) {
     #guestboat_text, #guestboat_table{
-		margin-left: 20%;
-		margin-right: 20%;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 	#table_of_temperatures{
 		margin: 0 auto;
@@ -578,8 +584,8 @@ end unified table
 
 @media (min-width: 1000px){
 	#turism_main{
-		margin-left:10%;
-		margin-right: 10%;
+		margin-left:15%;
+		margin-right: 15%;
 	}
 }
 
@@ -698,8 +704,8 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 
 @media (min-width: 1000px) {
     #djupvik_historia_main{
-		margin-left: 20%;
-		margin-right: 20%;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 }
 /* ------------------------------pictures------------------------------- */
@@ -764,3 +770,11 @@ larger screens like for the other pages!*/
 		grid-row: span 1;
 	}
   }
+
+  /*--------------------------- english ----------------------*/
+  @media (min-width: 1000px){
+	#english_main{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
