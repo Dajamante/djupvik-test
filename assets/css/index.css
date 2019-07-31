@@ -694,6 +694,13 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 	margin-left: 0.5em;
 	width: 0.5em;
 }
+
+@media (min-width: 1000px) {
+    #djupvik_historia_main{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
 /* ------------------------------pictures------------------------------- */
 
 /*tutorial found here: https://scrimba.com/p/pWqLHa/cBq3PsP
