@@ -213,7 +213,7 @@ figure {
   margin-bottom: 1em;
 }
 figure > img {
-  width: 45vw;
+  width: 40vw;
 }
 
 @media (min-width: 800px) {
@@ -280,8 +280,8 @@ https://codepen.io/CrocoDillon/pen/GJclb
 /* 600 looks best than 800px*/
 @media (min-width: 600px) {
   .kontakt_formular {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 #kontakta_oss_title {
@@ -343,6 +343,7 @@ input[type="tel"]:focus,
 }
 
 .kontakt_formular .radio_buttons {
+  font-size: 80%;
   display: flex;
   justify-content: center;
   align-content: center;
