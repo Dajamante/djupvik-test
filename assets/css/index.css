@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Amita:400|Indie+Flower:400');
+@import url("https://fonts.googleapis.com/css?family=Oxygen:400|Poppins:400|Amita:400|Indie+Flower:400");
 
 /*--------------------------------------
 reset
@@ -8,50 +8,129 @@ reset
    License: none (public domain)
 */
 
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* End of reset */
@@ -61,288 +140,307 @@ Poppins or Oxygen(?) theme
 -------------------------------------*/
 
 :root {
-	--classic_brown:  rgb(59, 46, 45);
-	--highlights: orangered;
-	--warm-brown:  rgb(34, 7, 3);
+  --classic_brown: rgb(59, 46, 45);
+  --highlights: orangered;
+  --warm-brown: rgb(34, 7, 3);
 }
 
 /*NOT "body" or ugly problems with margins....*/
-html main, aside {
-	font-size: 16px;
-	margin: 2em 2em 2em 2em;
-
+html main,
+aside {
+  font-size: 16px;
+  margin: 2em 2em 2em 2em;
 }
 
-* html h1, h2, h3, h4, h5, body {
+* html h1,
+h2,
+h3,
+h4,
+h5,
+body {
   text-align: left;
   font-weight: 400;
   line-height: 1.5;
 }
 
-
 h1 {
-	font-family: "Indie Flower", sans-serif;
-	font-weight: bold;
-	font-size: 300%;
-	margin-bottom: 2vw;
-	color: var(--classic_brown);
+  font-family: "Indie Flower", sans-serif;
+  font-weight: bold;
+  font-size: 300%;
+  margin-bottom: 2vw;
+  color: var(--classic_brown);
 }
 
 /*this one is not in a main section*/
 .pictures_page_container h1 {
-	padding-left: 1em;
+  padding-left: 1em;
 }
 
 h2 {
-	font-family: 'Poppins', sans-serif;
-	font-stretch: extra-expanded;
-	color: var(--classic_brown);
-	font-size: 165%;}
+  font-family: "Poppins", sans-serif;
+  font-stretch: extra-expanded;
+  color: var(--classic_brown);
+  font-size: 165%;
+}
 
 h3 {
-	color: var(--classic_brown);
-	font-size: 160%;}
-
-h4 {font-size: 120%;;}
-
-h5 {font-size: 115%;}
-
-html body{
-	font-family: 'Poppins', sans-serif;
+  color: var(--classic_brown);
+  font-size: 160%;
 }
 
-small, .text_small {font-size: 0.707em;}
+h4 {
+  font-size: 120%;
+}
 
-figure{
-	align-self: center;
-	text-align: center;
-	font-size: smaller;
-	  text-indent: 0;
-	  margin-bottom: 1em;
+h5 {
+  font-size: 115%;
+}
+
+html body {
+  font-family: "Poppins", sans-serif;
+}
+
+small,
+.text_small {
+  font-size: 0.707em;
+}
+
+figure {
+  align-self: center;
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+  margin-bottom: 1em;
 }
 figure > img {
-	width: 50vw;
+  width: 45vw;
 }
 
 @media (min-width: 800px) {
-    figure > img{
-		width: 35vw;
-	}
+  figure > img {
+    width: 35vw;
+  }
 }
 
-
-.footer{
-	margin-top: 2em;
-	padding-bottom: 2em;
-	margin-right: 0;
-	margin-left: 0;
-	padding-top: 1em;
-	background: var(--classic_brown);
-	font-size: 110%;
-	color: beige;
-	align-content: center;
-	text-align: center;
+.footer {
+  margin-top: 2em;
+  padding-bottom: 2em;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: 1em;
+  background: var(--classic_brown);
+  font-size: 110%;
+  color: beige;
+  align-content: center;
+  text-align: center;
 }
-.fa-home, .fa-mobile-alt{
-	padding-right: 10px;
-	font-size: 120%;
+.fa-home,
+.fa-mobile-alt {
+  padding-right: 10px;
+  font-size: 120%;
 }
 
 a:link {
-	text-decoration: none;
-	font-size: 1.4em;
-	color: rgb(13, 138, 201);
-	font-stretch: extra-expanded;
-	font-family: "Indie Flower", "cursive";
-  }
+  text-decoration: none;
+  font-size: 1.4em;
+  color: rgb(13, 138, 201);
+  font-stretch: extra-expanded;
+  font-family: "Indie Flower", "cursive";
+}
 
 a:visited {
-	color: rgb(5, 89, 131);
-	font-style: italic;
+  color: rgb(5, 89, 131);
+  font-style: italic;
 }
 
 a:hover {
-	color: var(--highlights);
+  color: var(--highlights);
 }
 
 a:active {
-	color: var(--highlights);
+  color: var(--highlights);
 }
-
 
 /*-------------------------- Kontakt page ----------------------------------*
 I followd this example:
 https://codepen.io/CrocoDillon/pen/GJclb
 -------------------------------------*/
 .kontakt_formular {
-	max-width: 100%;
-	text-align: center;
-	margin: 0 auto;
-	border-style: solid;
-	padding-bottom: 1em;
-	margin-bottom: 2em;
-	border: solid;
-	margin-left: 5%;
-	margin-right: 5%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border-style: solid;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border: solid;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* 600 looks best than 800px*/
-@media (min-width: 600px){
-.kontakt_formular {
-	margin-left: 15%;
-	margin-right: 15%;
-	}
+@media (min-width: 600px) {
+  .kontakt_formular {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 #kontakta_oss_title {
-	text-align: center;
-	margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 .kontakt_formular > h2 {
-	text-align: center;
+  text-align: center;
 }
 
 .kontakt_formular > h3 {
-	text-align: center;
-	margin: 1em ;
-	color:  var(--classic_brown);
-	font-size: 1.5em;
-	font-weight: 400;
+  text-align: center;
+  margin: 1em;
+  color: var(--classic_brown);
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
-.kontakt_formular input, textarea {
-	width: 100%;
-	padding: 1em;
-	border: solid;
+.kontakt_formular input,
+textarea {
+  width: 100%;
+  padding: 1em;
+  border: solid;
 }
 
-input[type="radio"]{
-	max-width: 30px;
+input[type="radio"] {
+  max-width: 30px;
 }
 
-.kontakt_formular input[type="text"], input[type="email"],  input[type="tel"], #meddelande {
-	max-width: 200px;
-	margin: 0 0 2em;
-	border: 1px solid #ccc;
-	outline: none;
+.kontakt_formular input[type="text"],
+input[type="email"],
+input[type="tel"],
+#meddelande {
+  max-width: 200px;
+  margin: 0 0 2em;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
-.hover_button{
-	max-width: 80px;
-	background-color: var(--warm-brown);
-	color: beige;
-	border-radius: 20px;
-	transition: background-color 0.3s ease;
+.hover_button {
+  max-width: 80px;
+  background-color: var(--warm-brown);
+  color: beige;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.hover_button:hover{
-	background-color: var(--highlights);
+.hover_button:hover {
+  background-color: var(--highlights);
 }
 .kontakt_formular #meddelande {
-	height: 10em;
+  height: 10em;
 }
-.kontakt_formular input[type="text"]:focus, input[type="email"]:focus,  input[type="tel"]:focus, #meddelande:focus {
-	background:rgb(245, 245, 220);
+.kontakt_formular input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+#meddelande:focus {
+  background: rgb(245, 245, 220);
 }
 
-.kontakt_formular .radio_buttons{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
+.kontakt_formular .radio_buttons {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .contact_pictures_wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#styrelse_info > h2:nth-child(1){
-	text-align: center;
+#styrelse_info > h2:nth-child(1) {
+  text-align: center;
 }
-#styrelse_info > p{
-	text-align: center;
+#styrelse_info > p {
+  text-align: center;
 }
 /*
 solution
 https://stackoverflow.com/questions/51616903/css-grid-white-space-on-the-bottom-and-how-to-remove-it
 */
-.contact_pictures{
-	display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 150px);
-	background-color: var(--classic_brown);
-	grid-gap: 5px;
-	height: fit-content;
-	width: fit-content;
-	margin-top: 20px;
-	padding: 5px;
+.contact_pictures {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(3, 150px);
+  background-color: var(--classic_brown);
+  grid-gap: 5px;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 5px;
 }
 .contact_pictures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#medlem_1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+#medlem_2 {
+  grid-row: 2;
+  grid-column: 1;
+}
+#medlem_3 {
+  grid-row: 3;
+  grid-column: 1;
+}
+#medlem_4 {
+  grid-row: 1;
+  grid-column: 2;
+}
+#medlem_5 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#medlem_6 {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+@media (min-width: 800px) {
+  .contact_pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    grid-template-rows: repeat(3, 260px);
+  }
+  .contact_pictures img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-#medlem_1{
-	grid-row: 1;
-	grid-column: 1;
-}
-#medlem_2{
-	grid-row: 2;
-	grid-column: 1;
-}
-#medlem_3{
-	grid-row: 3;
-	grid-column: 1;
-}
-#medlem_4{
-	grid-row: 1;
-	grid-column: 2;
-}
-#medlem_5{
-	grid-row: 2;
-	grid-column: 2;
-}
-#medlem_6{
-	grid-row: 3;
-	grid-column: 2;
-}
-
-@media (min-width: 800px){
-	.contact_pictures {
-		display: grid;
-    	grid-template-columns: repeat(2, 260px);
-    	grid-template-rows: repeat(3, 260px);
-	}
-	.contact_pictures img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	#medlem_1{
-		grid-row: 1;
-		grid-column: 1;
-	}
-	#medlem_2{
-		grid-row: 2;
-		grid-column: 1;
-	}
-	#medlem_3{
-		grid-row: 3;
-		grid-column: 1;
-	}
-	#medlem_4{
-		grid-row: 1;
-		grid-column: 2;
-	}
-	#medlem_5{
-		grid-row: 2;
-		grid-column: 2;
-	}
-	#medlem_6{
-		grid-row: 3;
-		grid-column: 2;
-	}
+  }
+  #medlem_1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #medlem_2 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #medlem_3 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #medlem_4 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  #medlem_5 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  #medlem_6 {
+    grid-row: 3;
+    grid-column: 2;
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -350,57 +448,56 @@ Nav menu
 Gotland uses Tangerine color and Gotland.se uses brown colors
 --------------------------------------------------------------------------------*/
 .fa-water {
-	font-size: 150%;
-	color:var(--classic_brown);
-	text-align: center;
-	margin: 0 auto;
-	/*don't want it to eat the menu*/
-	margin-top: 20px;
-	width: 100%;
-	transition: color 0.3s ease;
+  font-size: 150%;
+  color: var(--classic_brown);
+  text-align: center;
+  margin: 0 auto;
+  /*don't want it to eat the menu*/
+  margin-top: 20px;
+  width: 100%;
+  transition: color 0.3s ease;
 }
 
-.fa-water:hover{
-	color: var(--highlights);
+.fa-water:hover {
+  color: var(--highlights);
 }
 
 * header {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation_menu {
-	width: 100%;
-	list-style:none;
-	text-align:center;
-	letter-spacing: 3px;
-	background-color: rgba(59, 46, 45, 0.1);
-	margin: 0;
-	padding: 0;
-	display:none;
-	width:100%;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: rgba(59, 46, 45, 0.1);
+  margin: 0;
+  padding: 0;
+  display: none;
+  width: 100%;
 }
 
-
 .navigation_menu a {
-	font-family: 'Indie Flower', cursive;
-  	text-decoration:none;
-	color:var(--classic_brown);
+  font-family: "Indie Flower", cursive;
+  text-decoration: none;
+  color: var(--classic_brown);
 }
 
 .navigation_link:hover {
-	width: 100%;
-	background: var(--classic_brown);
+  width: 100%;
+  background: var(--classic_brown);
 }
-.navigation_link:hover a{
-	width: 100%;
-	color:beige;
+.navigation_link:hover a {
+  width: 100%;
+  color: beige;
 }
 .navigation_menu-toggle {
-	width: 100%;
-    color: var(--classic_brown);
-	width:100%;
-	text-align:center;
+  width: 100%;
+  color: var(--classic_brown);
+  width: 100%;
+  text-align: center;
 }
 
 /*-------------------------------------
@@ -408,265 +505,291 @@ Pages grid styling and internal styling
 -------------------------------------*/
 /* ------------------------------index------------------------------- */
 
-.startpage_container{
-	display: grid;
-	grid-template-columns: 1fr;
-	/*solves overlapping
+.startpage_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*solves overlapping
 	https://stackoverflow.com/questions/52675479/why-are-my-css-grid-items-overlapping-when-arranged-in-a-particular-layout*/
-	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(200px, auto);
-	grid-template-areas: "start_a" "start_b" "start_c";
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-areas: "start_a" "start_b" "start_c";
 }
 
 .djupvik_presentation {
-	grid-area: start_a;
+  grid-area: start_a;
 }
 .news {
-	grid-area: start_b;
+  grid-area: start_b;
 }
 
 .djupvik_footer {
-	grid-area: start_c;
+  grid-area: start_c;
 }
 
-.date{
-	font-style: italic;
-	font-size: small;
-	margin-bottom:1em;
+.date {
+  font-style: italic;
+  font-size: small;
+  margin-bottom: 1em;
 }
 
-.startpage_container p{
-	margin-bottom:1em;
+.startpage_container p {
+  margin-bottom: 1em;
 }
 
-@media (min-width: 1000px){
-	.djupvik_presentation, .news{
-		margin-left:15%;
-		margin-right: 15%;
-	}
+@media (min-width: 1000px) {
+  .djupvik_presentation,
+  .news {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 /* ------------------------------guestboats------------------------------- */
 
-.guestboat_container{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: 'guest_a' 'guest_b' 'guest_c';
+.guestboat_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas: "guest_a" "guest_b" "guest_c";
 }
 
 #guestboat_text {
-	grid-area: guest_a;
+  grid-area: guest_a;
 }
 #guestboat_table {
-	grid-area: guest_b;
+  grid-area: guest_b;
 }
 
 #guestboat_footer {
-	grid-area: guest_c;
+  grid-area: guest_c;
 }
-#guestboat_text > ul{
-	list-style-type: circle;
-	padding: 1em;
-	padding-right: 2em;
+#guestboat_text > ul {
+  list-style-type: circle;
+  padding: 1em;
+  padding-right: 2em;
 }
 
-#guestboat_text > .apparte{
-	font-size: x-small;
+#guestboat_text > .apparte {
+  font-size: x-small;
 }
 
 @media (min-width: 1000px) {
-    #guestboat_text, #guestboat_table{
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-	#table_of_temperatures{
-		margin: 0 auto;
-	}
+  #guestboat_text,
+  #guestboat_table {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  #table_of_temperatures {
+    margin: 0 auto;
+  }
 }
-
 
 /*--------------------------
 unified table (called unified table in case I would need more tables)
 (before the styrelse was also in a table)
 ---------------------------*/
 .unified_style_table {
-	border-collapse: separate;
-	border: solid;
-	border-style: ridge;
-	width:80vw;
-	max-width: 550px;
-	white-space:nowrap;
-	padding: 5px 5px 5px 5px;
-	vertical-align: middle;
-    text-align: center;
+  border-collapse: separate;
+  border: solid;
+  border-style: ridge;
+  width: 80vw;
+  max-width: 550px;
+  white-space: nowrap;
+  padding: 5px 5px 5px 5px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 /*solution for well centered data cells.
 https://stackoverflow.com/questions/18737037/how-do-i-align-items-in-a-td*/
-.unified_style_table td a, td input, td img {
-    vertical-align: middle;
-    display: inline-block;
+.unified_style_table td a,
+td input,
+td img {
+  vertical-align: middle;
+  display: inline-block;
 }
 .unified_style_table td {
-	font-size: small;
+  font-size: small;
 }
 
-.unified_style_table tr:nth-child(even) {background-color:  rgba(34, 7, 3, 0.1); }
+.unified_style_table tr:nth-child(even) {
+  background-color: rgba(34, 7, 3, 0.1);
+}
 
 /* efter mycket testning: bäst är https://css-tricks.com/responsive-data-tables/
 */
 @media only screen and (max-width: 600px) {
+  /* Force table to not be like tables anymore */
+  .unified_style_table th,
+  td,
+  tr {
+    display: block;
+  }
 
-/* Force table to not be like tables anymore */
-.unified_style_table th, td, tr {
-	display: block;
-}
+  /* Hide table headers (but not display: none;, for accessibility) */
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
 
-/* Hide table headers (but not display: none;, for accessibility) */
-th {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
-}
+  tr {
+    border: 2px solid #ccc;
+  }
 
-tr { border: 2px solid #ccc; }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
 
-td {
-	/* Behave  like a "row" */
-	border: none;
-	border-bottom: 1px solid #eee;
-	position: relative;
-	padding-left: 50%;
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    vertical-align: middle;
+    left: 20px;
+    width: 45%;
+    padding-right: 10px;
+  }
 
-}
-
-td:before {
-	/* Now like a table header */
-	position: absolute;
-	/* Top/left values mimic padding */
-	vertical-align: middle;
-	left: 20px;
-	width: 45%;
-	padding-right: 10px;
-
-}
-
-td:nth-of-type(1):before { content: "Dag : "; text-align: left;padding-left: 20px;}
-td:nth-of-type(2):before { content: "Tid : "; text-align: left;padding-left: 20px;}
-td:nth-of-type(3):before { content: "°C : "; text-align: left;padding-left: 20px;}
-td:nth-of-type(4):before { content: "Vind : "; text-align: left;padding-left: 20px;}
-td:nth-of-type(5):before { content: "Vädret : "; text-align: left;padding-left: 20px;}
-
+  td:nth-of-type(1):before {
+    content: "Dag : ";
+    text-align: left;
+    padding-left: 20px;
+  }
+  td:nth-of-type(2):before {
+    content: "Tid : ";
+    text-align: left;
+    padding-left: 20px;
+  }
+  td:nth-of-type(3):before {
+    content: "°C : ";
+    text-align: left;
+    padding-left: 20px;
+  }
+  td:nth-of-type(4):before {
+    content: "Vind : ";
+    text-align: left;
+    padding-left: 20px;
+  }
+  td:nth-of-type(5):before {
+    content: "Vädret : ";
+    text-align: left;
+    padding-left: 20px;
+  }
 }
 /*--------------------------
 end unified table
 ---------------------------*/
 
-
-
 /* ------------------------------turism------------------------------- */
 
 .turism_container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto;
-	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: "tur_a" "tur_b";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas: "tur_a" "tur_b";
 }
 #turism_main {
-	grid-area: tur_a;
+  grid-area: tur_a;
 }
 #turism_footer {
-	grid-area: tur_b;
+  grid-area: tur_b;
 }
 
-@media (min-width: 1000px){
-	#turism_main{
-		margin-left:15%;
-		margin-right: 15%;
-	}
+@media (min-width: 1000px) {
+  #turism_main {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 /* ------------------------------kontakt------------------------------- */
 .kontakt_container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: "kontakt_a" "kontakt_b" "kontakt_c";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas: "kontakt_a" "kontakt_b" "kontakt_c";
 }
 
 #kontakt_main {
-	grid-area: kontakt_a;
+  grid-area: kontakt_a;
 }
 
-#styrelse_info{
-	grid-area: kontakt_b;
+#styrelse_info {
+  grid-area: kontakt_b;
 }
 #kontakt_footer {
-	grid-area: kontakt_c;
+  grid-area: kontakt_c;
 }
-
 
 /* overriding blue select2 defalut options*/
 .select2-results__option {
-	color: var(--classic_brown);
-	background-color: beige;
-  }
+  color: var(--classic_brown);
+  background-color: beige;
+}
 
 .select2-results__option--highlighted {
-	color: beige !important;
-	background-color:rgb(59, 46, 45) !important;
+  color: beige !important;
+  background-color: rgb(59, 46, 45) !important;
 }
 
-.read_more {display: none;}
+.read_more {
+  display: none;
+}
 
 .read_more_toggle {
-	text-align: center;
+  text-align: center;
 }
 
-
 /* ------------------------------historia------------------------------- */
-.historia_container{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto;
-	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: "hist_a" "hist_b";
+.historia_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas: "hist_a" "hist_b";
 }
 
 #historia_footer {
-	grid-area: hist_b;
+  grid-area: hist_b;
 }
-#djupvik_historia_main{
-	grid-area: hist_a;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-	grid-auto-rows: minmax(300px, auto);
-	grid-template-areas: "hist_main_a" "hist_main_b" "hist_main_c";
+#djupvik_historia_main {
+  grid-area: hist_a;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas: "hist_main_a" "hist_main_b" "hist_main_c";
 }
 
 #djupvik_historia_main #summary_historia {
-	grid-area: hist_main_a;
+  grid-area: hist_main_a;
 }
 
-#djupvik_historia_main #tempest{
-	grid-area: hist_main_b;
+#djupvik_historia_main #tempest {
+  grid-area: hist_main_b;
 }
 
-#namnforklaring{
-	grid-area: hist_main_c;
+#namnforklaring {
+  grid-area: hist_main_c;
 }
 
-.historia_container h1, h2, p, button {
-	margin-bottom: 1em;
+.historia_container h1,
+h2,
+p,
+button {
+  margin-bottom: 1em;
 }
 /* it uses class hover button but the padding must be bigger*/
-#myBtn{
-	padding: 1em;
+#myBtn {
+  padding: 1em;
 }
 
 /*
@@ -674,39 +797,39 @@ solution:
 https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awesome-icon*/
 
 #namnforklaring {
-	list-style: none;
+  list-style: none;
 }
 
-.namnforklaring_list_item{
-	font-family: 'Indie flower', cursive;
-	font-size: 1.25em;
-	/*margin left*/
-	margin-left: 3em;
-	font-stretch: extra-expanded;
+.namnforklaring_list_item {
+  font-family: "Indie flower", cursive;
+  font-size: 1.25em;
+  /*margin left*/
+  margin-left: 3em;
+  font-stretch: extra-expanded;
 }
 
 #namnforklaring li:before {
-	content: "\f10d"; /* FontAwesome Unicode */
-	font-family: FontAwesome;
-	color: var(--classic_brown);
-	display: inline-block;
-	margin-left: -1.3em; /* same as padding-left set on li */
-	width: 1.3em; /* same as padding-left set on li */
+  content: "\f10d"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  color: var(--classic_brown);
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
 }
 
 #namnforklaring li:after {
-	content: "\f10e";
-	font-family: FontAwesome;
-	color: var(--classic_brown);
-	margin-left: 0.5em;
-	width: 0.5em;
+  content: "\f10e";
+  font-family: FontAwesome;
+  color: var(--classic_brown);
+  margin-left: 0.5em;
+  width: 0.5em;
 }
 
 @media (min-width: 1000px) {
-    #djupvik_historia_main{
-		margin-left: 15%;
-		margin-right: 15%;
-	}
+  #djupvik_historia_main {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 /* ------------------------------pictures------------------------------- */
 
@@ -714,67 +837,66 @@ https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awes
 */
 
 .pictures_page_container {
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto;
-	grid-template-areas: "pic_a" "pic_b";}
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "pic_a" "pic_b";
+}
 
 #pictures_footer {
-	  grid-area: pic_b;
+  grid-area: pic_b;
 }
 
 #pictures_main {
-	display: grid;
-	grid-area: pic_a;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(5, 200px);
-	grid-gap: 3px;
-	grid-auto-flow: dense;
-	/*bordure*/
-
+  display: grid;
+  grid-area: pic_a;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(5, 200px);
+  grid-gap: 3px;
+  grid-auto-flow: dense;
+  /*bordure*/
 }
 
 #pictures_main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 #pictures_main .horizontal {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 #pictures_main .vertical {
-    grid-row: span 2;
+  grid-row: span 2;
 }
 
 #pictures_main .bigger {
-    grid-column: span 2;
-    grid-row: span 2;
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 /* This is the first I did, so I did a media query for mobiles instead of
 larger screens like for the other pages!*/
-@media (max-width:500px) {
-	#pictures_main {
-	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-
-	}
-	#pictures_main .vertical {
-		grid-row: span 1;
-	}
-	#pictures_main .bigger {
-		grid-column: span 2;
-		grid-row: span 1;
-	}
+@media (max-width: 500px) {
+  #pictures_main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   }
+  #pictures_main .vertical {
+    grid-row: span 1;
+  }
+  #pictures_main .bigger {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
 
-  /*--------------------------- english ----------------------*/
-  @media (min-width: 1000px){
-	#english_main{
-		margin-left: 15%;
-		margin-right: 15%;
-	}
+/*--------------------------- english ----------------------*/
+@media (min-width: 1000px) {
+  #english_main {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
